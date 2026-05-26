@@ -1,0 +1,16 @@
+.section {
+  padding-block: var(--section-padding-y);
+}
+
+.section__header {
+  margin-bottom: 2rem;
+}
+
+.section__title {
+  margin-bottom: 0.5rem;
+}
+
+.section__description {
+  color: var(--color-muted);
+  max-width: 42rem;
+}

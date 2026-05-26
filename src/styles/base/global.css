@@ -1,0 +1,13 @@
+body {
+  min-height: 100svh;
+  background-color: var(--color-bg);
+}
+
+.site-header,
+.site-footer {
+  width: 100%;
+}
+
+#main-content {
+  flex: 1;
+}
