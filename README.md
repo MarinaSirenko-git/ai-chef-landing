@@ -10,7 +10,7 @@ Marketing landing page for AI Chef — a lightweight, accessible static site bui
 - Vite
 - GSAP
 - Plain CSS (BEM, CSS variables)
-- Cloudflare Pages (recommended deployment)
+- Cloudflare Workers Static Assets
 
 ## Features
 
@@ -69,15 +69,26 @@ npm run preview
 
 ## Deployment
 
-Deploy to [Cloudflare Pages](https://pages.cloudflare.com/) with these settings:
+This project is configured for Cloudflare Workers Static Assets deployment.
 
-| Setting | Value |
-| --- | --- |
-| Build command | `npm run build` |
-| Output directory | `dist` |
-| Production branch | `main` |
+### Local Cloudflare preview
 
-For Workers-based static hosting, use `setup-cloudflare-workers-static` and `deploy-cloudflare-workers-static`.
+```bash
+npm run dev:cf
+```
+
+### Deploy
+
+```bash
+npx wrangler login
+npm run deploy
+```
+
+After deployment, Cloudflare will provide a `*.workers.dev` URL.
+
+### Performance audit
+
+After local preview or deployment, run a web performance audit with Cloudflare `/web-perf`.
 
 ## Accessibility Notes
 
