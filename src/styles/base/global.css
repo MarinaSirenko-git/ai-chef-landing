@@ -1,6 +1,17 @@
 body {
   min-height: 100svh;
-  background-color: var(--color-bg);
+  font-family: var(--font-main, system-ui, sans-serif);
+  color: var(--color-text, #213d34);
+  background: var(--color-bg, #ffffff);
+  line-height: var(--text-body-line-height, 1.4);
+}
+
+main {
+  overflow: hidden;
+}
+
+section {
+  scroll-margin-top: 96px;
 }
 
 .site-header,
@@ -10,4 +21,16 @@ body {
 
 #main-content {
   flex: 1;
+}
+
+blockquote {
+  quotes: none;
+}
+
+cite {
+  font-style: normal;
+}
+
+strong {
+  font-weight: 600;
 }

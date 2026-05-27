@@ -2,18 +2,33 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  padding: 0.75rem 1.5rem;
-  border-radius: var(--radius-sm);
-  font-weight: 500;
+  gap: var(--space-8, 8px);
+  min-height: var(--space-64, 64px);
+  padding: 0.75rem var(--space-40, 40px);
+  border: var(--border-width, 2px) solid transparent;
+  border-radius: var(--radius-pill, 50px);
+  font-family: var(--font-main);
+  font-size: var(--text-button-size, 22px);
+  line-height: var(--text-button-line-height, 28px);
+  font-weight: var(--text-button-weight, 500);
   text-decoration: none;
-  transition: background-color var(--transition-base), color var(--transition-base),
-    border-color var(--transition-base);
+  white-space: nowrap;
+  transition:
+    color var(--transition-base, 200ms ease),
+    background-color var(--transition-base, 200ms ease),
+    border-color var(--transition-base, 200ms ease),
+    transform var(--transition-base, 200ms ease);
+}
+
+.button:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
 }
 
 .button--primary {
-  background-color: var(--color-accent);
-  color: var(--color-bg);
+  color: var(--color-button-primary-text, #ffffff);
+  background: var(--color-button-primary-bg, var(--color-green, #213d34));
+  border-color: var(--color-button-primary-bg, var(--color-green, #213d34));
 }
 
 .button--primary:hover {
@@ -21,12 +36,23 @@
 }
 
 .button--secondary {
-  background-color: transparent;
-  color: var(--color-text);
-  border: 1px solid var(--color-text);
+  color: var(--color-button-secondary-text, var(--color-text, #213d34));
+  background: var(--color-button-secondary-bg, transparent);
+  border-color: var(--color-border, #213d34);
 }
 
 .button--secondary:hover {
-  background-color: var(--color-text);
-  color: var(--color-bg);
+  background: var(--color-text, #213d34);
+  color: var(--color-text-inverted, #ffffff);
+}
+
+.button--outline {
+  color: var(--color-text, #213d34);
+  border-color: var(--color-button-outline-border, var(--color-border, #213d34));
+  background: transparent;
+}
+
+.button--outline:hover {
+  background: var(--color-text, #213d34);
+  color: var(--color-text-inverted, #ffffff);
 }

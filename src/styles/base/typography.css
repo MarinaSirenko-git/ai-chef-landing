@@ -1,37 +1,48 @@
-body {
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, var(--text-h2-size, 55px));
+  line-height: var(--text-h2-line-height, 1);
+  font-weight: var(--text-h2-weight, 500);
+  color: var(--color-text);
+}
+
+.section-text {
   font-family: var(--font-main);
-  font-size: 1rem;
-  line-height: 1.5;
+  font-size: clamp(1rem, 2vw, var(--text-body-size, 22px));
+  line-height: var(--text-body-line-height, 1.4);
+  font-weight: var(--text-body-weight, 400);
   color: var(--color-text);
+  max-width: 52rem;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 600;
-  line-height: 1.2;
+.eyebrow {
+  font-family: var(--font-main);
+  font-size: clamp(0.875rem, 1.5vw, var(--text-eyebrow-size, 26px));
+  line-height: var(--text-subheading-line-height, 1.2);
+  font-weight: var(--text-subheading-weight, 400);
+  letter-spacing: 0.02em;
+}
+
+.card-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 2.5vw, var(--text-card-title-size, 40px));
+  line-height: var(--text-h3-line-height, 1);
+  font-weight: var(--text-h3-weight, 400);
+  color: inherit;
+}
+
+.card-text {
+  font-family: var(--font-main);
+  font-size: clamp(1rem, 1.5vw, var(--text-card-text-size, 22px));
+  line-height: var(--text-body-line-height, 1.4);
+  font-weight: var(--text-body-weight, 400);
+  color: inherit;
+}
+
+.hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 5vw, var(--text-h1-size, 61px));
+  line-height: var(--text-h1-line-height, 1);
+  font-weight: var(--text-h1-weight, 500);
   color: var(--color-text);
-}
-
-h1 {
-  font-size: clamp(2rem, 5vw, 3.5rem);
-}
-
-h2 {
-  font-size: clamp(1.5rem, 3vw, 2.5rem);
-}
-
-h3 {
-  font-size: clamp(1.25rem, 2vw, 1.75rem);
-}
-
-p {
-  color: var(--color-text);
-}
-
-.text-muted {
-  color: var(--color-muted);
 }

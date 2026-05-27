@@ -1,0 +1,29 @@
+.benefits__list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-21, 21px);
+}
+
+.benefits__item--photo {
+  grid-row: span 2;
+}
+
+@media (max-width: 1024px) {
+  .benefits__list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .benefits__item--photo {
+    grid-row: span 1;
+  }
+}
+
+@media (max-width: 640px) {
+  .benefits__list {
+    grid-template-columns: 1fr;
+  }
+
+  .benefit-card--photo {
+    border-radius: var(--radius-md, 34px);
+  }
+}

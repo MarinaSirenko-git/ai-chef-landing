@@ -9,23 +9,42 @@
 }
 
 html {
+  scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-width: 320px;
 }
 
 img,
 picture,
+svg,
 video,
-canvas,
-svg {
+canvas {
   display: block;
   max-width: 100%;
 }
 
-input,
+img {
+  height: auto;
+}
+
 button,
+input,
 textarea,
 select {
   font: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+a {
+  color: inherit;
 }
 
 p,
@@ -38,18 +57,8 @@ h6 {
   overflow-wrap: break-word;
 }
 
-a {
-  color: inherit;
-}
-
 ul,
 ol {
   list-style: none;
   padding: 0;
-}
-
-button {
-  cursor: pointer;
-  border: none;
-  background: none;
 }

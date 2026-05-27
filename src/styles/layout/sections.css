@@ -1,16 +1,14 @@
-.section {
-  padding-block: var(--section-padding-y);
+section {
+  padding-block: var(--section-padding-y, 100px);
 }
 
-.section__header {
-  margin-bottom: 2rem;
+.section-header {
+  display: grid;
+  gap: var(--space-28, 28px);
+  margin-bottom: var(--space-100, 100px);
 }
 
-.section__title {
-  margin-bottom: 0.5rem;
-}
-
-.section__description {
-  color: var(--color-muted);
-  max-width: 42rem;
+.section-header__line {
+  width: 100px;
+  height: auto;
 }
