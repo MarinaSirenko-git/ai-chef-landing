@@ -38,3 +38,7 @@ Thumbs.db
 .cache
 .temp
 tmp
+
+# AI / Cursor generated working files
+.cursor-output/
+.cursor/tmp/
