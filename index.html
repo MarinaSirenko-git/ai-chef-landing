@@ -4,14 +4,1075 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ai-chef-landing</title>
+    <title>AIChefMate — AI-Powered Meal Planning</title>
+    <meta
+      name="description"
+      content="Elevate your mealtime with AI-powered personalization. Effortless planning, healthier eating, and meal plans tailored to your goals."
+    />
     <link rel="stylesheet" href="/src/styles/main.css" />
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
-    <header class="site-header"></header>
-    <main id="main-content">Hello world!</main>
-    <footer class="site-footer"></footer>
+
+    <header class="site-header" aria-label="Site header">
+      <div class="site-header__container container">
+        <a class="site-header__logo" href="/" aria-label="AIChefMate home">
+          <img
+            class="site-header__logo-image"
+            src="/src/assets/logos/logo-header.svg"
+            alt="AIChefMate"
+            width="74"
+            height="50"
+            decoding="async"
+          />
+        </a>
+
+        <nav class="site-header__nav" id="main-navigation" aria-label="Main navigation">
+          <ul class="site-header__nav-list">
+            <li class="site-header__nav-item">
+              <a class="site-header__nav-link" href="#recipes-preview">Recipes</a>
+            </li>
+            <li class="site-header__nav-item">
+              <a class="site-header__nav-link" href="#blog">Blog</a>
+            </li>
+            <li class="site-header__nav-item">
+              <a class="site-header__nav-link" href="#cta-support">Customer Support</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="site-header__actions">
+          <a class="site-header__login" href="/login">Log In</a>
+          <a class="site-header__cta button" href="#hero">Start For Free</a>
+        </div>
+
+        <button
+          class="site-header__burger js-burger"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="main-navigation"
+        >
+          <span class="site-header__burger-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="hero" id="hero" aria-labelledby="hero-title">
+        <img
+          class="hero__background"
+          src="/src/assets/images/hero-background.svg"
+          alt=""
+          aria-hidden="true"
+          width="1920"
+          height="1220"
+          decoding="async"
+        />
+
+        <div class="hero__container container">
+          <div class="hero__content">
+            <p class="hero__subtitle">Effortless Planning, Healthier Eating</p>
+            <h1 class="hero__title" id="hero-title">
+              Elevate Your Mealtime with AI-Powered Personalization
+            </h1>
+
+            <ul class="hero__stats">
+              <li class="hero__stat">
+                <article class="hero-stat-card">
+                  <p class="hero-stat-card__value">95%</p>
+                  <p class="hero-stat-card__label">Improved Eating Habits</p>
+                  <img
+                    class="hero-stat-card__image"
+                    src="/src/assets/images/photo-vegetables.webp"
+                    alt="Fresh vegetables in a paper bag"
+                    width="260"
+                    height="293"
+                    decoding="async"
+                    loading="lazy"
+                  />
+                </article>
+              </li>
+              <li class="hero__stat">
+                <article class="hero-stat-card">
+                  <p class="hero-stat-card__value">25%</p>
+                  <p class="hero-stat-card__label">Saved on Groceries</p>
+                  <img
+                    class="hero-stat-card__image"
+                    src="/src/assets/images/photo-produce-bag.webp"
+                    alt="Person holding a mesh produce bag"
+                    width="260"
+                    height="293"
+                    decoding="async"
+                    loading="lazy"
+                  />
+                </article>
+              </li>
+              <li class="hero__stat">
+                <article class="hero-stat-card hero-stat-card--highlight">
+                  <p class="hero-stat-card__value">30 000 +</p>
+                  <p class="hero-stat-card__label">Happy Users</p>
+                </article>
+              </li>
+            </ul>
+
+            <div class="hero__actions">
+              <a class="hero__button button button--outline" href="#demo">Try Our Demo</a>
+              <a class="hero__button button button--primary" href="#pricing">Start For Free</a>
+            </div>
+          </div>
+
+          <div class="hero__gallery">
+            <img
+              class="hero__image"
+              src="/src/assets/images/photo-meal-center.webp"
+              alt="Center hero food photo"
+              width="275"
+              height="461"
+              decoding="async"
+              fetchpriority="high"
+            />
+            <img
+              class="hero__image hero__image--secondary"
+              src="/src/assets/images/photo-greens-bowl.webp"
+              alt="Bowl of greens and soup"
+              width="275"
+              height="491"
+              decoding="async"
+              loading="lazy"
+            />
+
+            <ul class="hero__icons" aria-hidden="true">
+              <li class="hero__icon">
+                <img src="/src/assets/icons/icon-carrot.webp" alt="" width="31" height="31" decoding="async" />
+              </li>
+              <li class="hero__icon">
+                <img src="/src/assets/icons/icon-ingredients.webp" alt="" width="41" height="41" decoding="async" />
+              </li>
+              <li class="hero__icon">
+                <img src="/src/assets/icons/icon-cherry.webp" alt="" width="52" height="52" decoding="async" />
+              </li>
+              <li class="hero__icon">
+                <img src="/src/assets/icons/icon-bread.webp" alt="" width="30" height="30" decoding="async" />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="demo" id="demo" aria-labelledby="demo-title">
+        <div class="demo__container container">
+          <header class="demo__header section-header">
+            <h2 class="demo__title section-header__title" id="demo-title">Demo</h2>
+            <img
+              class="section-header__line"
+              src="/src/assets/icons/section-heading-line.svg"
+              alt=""
+              aria-hidden="true"
+              width="100"
+              height="87"
+              decoding="async"
+            />
+            <p class="demo__text section-header__text">
+              See how it works: your personalized meal planning journey
+            </p>
+          </header>
+
+          <div class="demo__layout">
+            <figure class="demo__media">
+              <img
+                class="demo__video-image"
+                src="/src/assets/images/demo-video-basil.webp"
+                alt="Fresh basil leaves in demo video capsule"
+                width="1045"
+                height="610"
+                decoding="async"
+                loading="lazy"
+              />
+              <button class="demo__play button" type="button" aria-label="Play demo video">
+                <img
+                  src="/src/assets/icons/icon-play.svg"
+                  alt=""
+                  aria-hidden="true"
+                  width="82"
+                  height="82"
+                  decoding="async"
+                />
+              </button>
+            </figure>
+
+            <blockquote class="demo__quote">
+              <p>
+                Every meal is a chance to nourish your body, inspire your mind, and feed your soul.
+              </p>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <section class="process" id="process" aria-labelledby="process-title">
+        <div class="process__container container">
+          <header class="process__header section-header">
+            <h2 class="process__title section-header__title" id="process-title">How it works</h2>
+            <img
+              class="section-header__line"
+              src="/src/assets/icons/section-heading-line.svg"
+              alt=""
+              aria-hidden="true"
+              width="100"
+              height="87"
+              decoding="async"
+            />
+            <p class="process__text section-header__text">
+              Step into the world of hassle-free meal planning with our easy 3-step process
+            </p>
+          </header>
+
+          <div class="process__layout">
+            <ol class="process__list">
+              <li class="process__item">
+                <article class="process-card">
+                  <p class="process-card__step"><span class="process-card__number">01</span> / 03</p>
+                  <h3 class="process-card__title">Personalize Your Profile</h3>
+                  <p class="process-card__text">
+                    Begin by creating your profile. Tell us about your dietary preferences, nutritional
+                    goals, and budget. Our AI technology tailors every meal plan to fit your unique needs.
+                  </p>
+                </article>
+              </li>
+              <li class="process__item">
+                <article class="process-card">
+                  <p class="process-card__step"><span class="process-card__number">02</span> / 03</p>
+                  <h3 class="process-card__title">Receive Your Meal Plan</h3>
+                  <!-- TODO: Replace with final Figma text for step 02 -->
+                  <p class="process-card__text">
+                    Get AI-generated weekly meal plans matched to your preferences and schedule.
+                  </p>
+                </article>
+              </li>
+              <li class="process__item">
+                <article class="process-card">
+                  <p class="process-card__step"><span class="process-card__number">03</span> / 03</p>
+                  <h3 class="process-card__title">Cook and Enjoy</h3>
+                  <!-- TODO: Replace with final Figma text for step 03 -->
+                  <p class="process-card__text">
+                    Follow simple recipes, shop smarter, and enjoy healthier meals every day.
+                  </p>
+                </article>
+              </li>
+            </ol>
+
+            <div class="process__gallery">
+              <img
+                class="process__photo process__photo--back"
+                src="/src/assets/images/how-it-works-photo-mid.webp"
+                alt=""
+                aria-hidden="true"
+                width="448"
+                height="537"
+                decoding="async"
+                loading="lazy"
+              />
+              <img
+                class="process__photo process__photo--mid"
+                src="/src/assets/images/how-it-works-photo-front.webp"
+                alt="Person enjoying a home-cooked meal"
+                width="568"
+                height="682"
+                decoding="async"
+                loading="lazy"
+              />
+              <img
+                class="process__photo process__photo--front"
+                src="/src/assets/images/photo-meal-center.webp"
+                alt=""
+                aria-hidden="true"
+                width="568"
+                height="682"
+                decoding="async"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="process__controls">
+              <button class="process__control button" type="button" aria-label="Previous step">
+                Previous
+              </button>
+              <button class="process__control button" type="button" aria-label="Next step">Next</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="benefits" id="benefits" aria-labelledby="benefits-title">
+        <div class="benefits__container container">
+          <header class="benefits__header section-header">
+            <h2 class="benefits__title section-header__title" id="benefits-title">Benefits</h2>
+            <img
+              class="section-header__line"
+              src="/src/assets/icons/section-heading-line.svg"
+              alt=""
+              aria-hidden="true"
+              width="100"
+              height="87"
+              decoding="async"
+            />
+            <p class="benefits__text section-header__text">
+              Get meal plans tailored to your unique dietary needs, preferences, and goals, ensuring a
+              balanced and enjoyable diet.
+            </p>
+          </header>
+
+          <ul class="benefits__list">
+            <li class="benefits__item">
+              <article class="benefit-card benefit-card--accent">
+                <h3 class="benefit-card__title">Personalized Nutrition</h3>
+                <p class="benefit-card__text">
+                  Get meal plans tailored to your unique dietary needs, preferences, and goals, ensuring a
+                  balanced and enjoyable diet.
+                </p>
+              </article>
+            </li>
+            <li class="benefits__item benefits__item--photo">
+              <figure class="benefit-card benefit-card--photo">
+                <img
+                  class="benefit-card__image"
+                  src="/src/assets/images/photo-produce-bag.webp"
+                  alt="Person holding a mesh produce bag"
+                  width="394"
+                  height="546"
+                  decoding="async"
+                  loading="lazy"
+                />
+              </figure>
+            </li>
+            <li class="benefits__item">
+              <article class="benefit-card">
+                <h3 class="benefit-card__title">Time-Saving Convenience</h3>
+                <p class="benefit-card__text">
+                  Say goodbye to meal planning stress. Our AI-driven platform simplifies your weekly meal
+                  preparation, saving you valuable time.
+                </p>
+              </article>
+            </li>
+            <li class="benefits__item">
+              <article class="benefit-card benefit-card--surface">
+                <h3 class="benefit-card__title">Healthier Eating Habits</h3>
+                <p class="benefit-card__text">
+                  Easily adopt a healthier lifestyle with nutrient-rich meal plans and educational content
+                  on nutrition and wellness.
+                </p>
+              </article>
+            </li>
+            <li class="benefits__item">
+              <article class="benefit-card">
+                <h3 class="benefit-card__title">Cost-Effective Shopping</h3>
+                <p class="benefit-card__text">
+                  Reduce food waste and save money with efficient grocery shopping lists that align
+                  perfectly with your meal plans.
+                </p>
+              </article>
+            </li>
+            <li class="benefits__item">
+              <article class="benefit-card">
+                <h3 class="benefit-card__title">Seamless Grocery Delivery</h3>
+                <p class="benefit-card__text">
+                  Enjoy the convenience of having all your meal ingredients delivered right to your doorstep
+                  through our local grocery store partnerships.
+                </p>
+              </article>
+            </li>
+            <li class="benefits__item">
+              <article class="benefit-card benefit-card--inverted">
+                <h3 class="benefit-card__title">Community Support</h3>
+                <p class="benefit-card__text">
+                  Join a community of like-minded individuals, share experiences, recipes, and tips, and get
+                  motivated on your journey to healthier eating.
+                </p>
+              </article>
+            </li>
+            <li class="benefits__item benefits__item--photo">
+              <figure class="benefit-card benefit-card--photo">
+                <img
+                  class="benefit-card__image"
+                  src="/src/assets/images/photo-vegetables.webp"
+                  alt="Fresh vegetables in a paper bag"
+                  width="394"
+                  height="394"
+                  decoding="async"
+                  loading="lazy"
+                />
+              </figure>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="recipes-preview" id="recipes-preview" aria-labelledby="recipes-preview-title">
+        <div class="recipes-preview__container container">
+          <header class="recipes-preview__header section-header">
+            <h2 class="recipes-preview__title section-header__title" id="recipes-preview-title">Recipes</h2>
+            <img
+              class="section-header__line"
+              src="/src/assets/icons/section-heading-line.svg"
+              alt=""
+              aria-hidden="true"
+              width="100"
+              height="87"
+              decoding="async"
+            />
+            <p class="recipes-preview__text section-header__text">
+              Recipes crafted by AI, personalized to perfectly align with your unique dietary needs and
+              flavor preferences
+            </p>
+          </header>
+
+          <div class="recipes-preview__layout">
+            <ul class="recipes-preview__list">
+              <li class="recipes-preview__item">
+                <article class="recipe-card recipe-card--outline">
+                  <h3 class="recipe-card__title">Savory Quinoa and Roasted Vegetable Bowl</h3>
+                  <a class="recipe-card__link button" href="/recipes/quinoa-bowl">Learn More</a>
+                  <img
+                    class="recipe-card__thumb"
+                    src="/src/assets/images/recipe-quinoa-bowl.webp"
+                    alt="Savory quinoa bowl recipe thumbnail"
+                    width="220"
+                    height="219"
+                    decoding="async"
+                    loading="lazy"
+                  />
+                </article>
+              </li>
+              <li class="recipes-preview__item">
+                <article class="recipe-card recipe-card--highlight">
+                  <img
+                    class="recipe-card__thumb recipe-card__thumb--large"
+                    src="/src/assets/images/recipe-chicken.webp"
+                    alt="Herb-infused grilled chicken recipe thumbnail"
+                    width="220"
+                    height="220"
+                    decoding="async"
+                    loading="lazy"
+                  />
+                  <h3 class="recipe-card__title">Herb-Infused Grilled Chicken with Seasonal Greens</h3>
+                  <a class="recipe-card__link button" href="/recipes/grilled-chicken">Learn More</a>
+                </article>
+              </li>
+              <li class="recipes-preview__item">
+                <article class="recipe-card recipe-card--surface">
+                  <h3 class="recipe-card__title">Mediterranean Lentil and Kale Salad</h3>
+                  <a class="recipe-card__link button" href="/recipes/lentil-salad">Learn More</a>
+                  <img
+                    class="recipe-card__thumb"
+                    src="/src/assets/images/recipe-lentil-salad.webp"
+                    alt="Mediterranean lentil salad recipe thumbnail"
+                    width="220"
+                    height="219"
+                    decoding="async"
+                    loading="lazy"
+                  />
+                </article>
+              </li>
+            </ul>
+
+            <figure class="recipes-preview__featured">
+              <figcaption class="recipes-preview__featured-caption">
+                <a class="recipes-preview__explore" href="/recipes">Explore more recipes</a>
+              </figcaption>
+              <img
+                class="recipes-preview__featured-image"
+                src="/src/assets/images/recipes-featured-spread.webp"
+                alt="Large featured recipes food spread"
+                width="778"
+                height="960"
+                decoding="async"
+                loading="lazy"
+              />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonials" id="testimonials" aria-labelledby="testimonials-title">
+        <div class="testimonials__container container">
+          <header class="testimonials__header section-header">
+            <h2 class="testimonials__title section-header__title" id="testimonials-title">Testimonials</h2>
+            <img
+              class="section-header__line"
+              src="/src/assets/icons/section-heading-line.svg"
+              alt=""
+              aria-hidden="true"
+              width="100"
+              height="87"
+              decoding="async"
+            />
+            <p class="testimonials__text section-header__text">
+              Real stories from satisfied users: see how our platform changes lives
+            </p>
+          </header>
+
+          <ul class="testimonials__list">
+            <li class="testimonials__item">
+              <article class="testimonial-card">
+                <blockquote class="testimonial-card__quote">
+                  <p>
+                    Since using AIChefMate, I've rediscovered my love for cooking! The meal plans are easy
+                    and delicious. It's been a game-changer for my busy lifestyle.
+                  </p>
+                </blockquote>
+                <img
+                  class="testimonial-card__quote-icon"
+                  src="/src/assets/icons/icon-quote-light.svg"
+                  alt=""
+                  aria-hidden="true"
+                  width="29"
+                  height="21"
+                  decoding="async"
+                />
+                <footer class="testimonial-card__author">
+                  <img
+                    class="testimonial-card__avatar"
+                    src="/src/assets/images/avatar-emily.webp"
+                    alt="Portrait of Emily R."
+                    width="60"
+                    height="60"
+                    decoding="async"
+                    loading="lazy"
+                  />
+                  <cite class="testimonial-card__name">Emily R.</cite>
+                </footer>
+              </article>
+            </li>
+            <li class="testimonials__item">
+              <article class="testimonial-card testimonial-card--inverted">
+                <blockquote class="testimonial-card__quote">
+                  <p>
+                    I never knew healthy eating could be this simple and satisfying. Thanks to AIChefMate,
+                    my family enjoys diverse, nutritious meals every day.
+                  </p>
+                </blockquote>
+                <img
+                  class="testimonial-card__quote-icon"
+                  src="/src/assets/icons/icon-quote-dark.svg"
+                  alt=""
+                  aria-hidden="true"
+                  width="29"
+                  height="21"
+                  decoding="async"
+                />
+                <footer class="testimonial-card__author">
+                  <img
+                    class="testimonial-card__avatar"
+                    src="/src/assets/images/avatar-mark.webp"
+                    alt="Portrait of Mark T."
+                    width="60"
+                    height="60"
+                    decoding="async"
+                    loading="lazy"
+                  />
+                  <cite class="testimonial-card__name">Mark T.</cite>
+                </footer>
+              </article>
+            </li>
+            <li class="testimonials__item">
+              <article class="testimonial-card">
+                <blockquote class="testimonial-card__quote">
+                  <p>
+                    The grocery savings have been incredible! Plus, every meal feels tailored just for me.
+                    I'm eating better and feeling great. A big thumbs up!
+                  </p>
+                </blockquote>
+                <img
+                  class="testimonial-card__quote-icon"
+                  src="/src/assets/icons/icon-quote-light.svg"
+                  alt=""
+                  aria-hidden="true"
+                  width="29"
+                  height="21"
+                  decoding="async"
+                />
+                <footer class="testimonial-card__author">
+                  <img
+                    class="testimonial-card__avatar"
+                    src="/src/assets/images/avatar-sarah.webp"
+                    alt="Portrait of Sarah J."
+                    width="60"
+                    height="60"
+                    decoding="async"
+                    loading="lazy"
+                  />
+                  <cite class="testimonial-card__name">Sarah J.</cite>
+                </footer>
+              </article>
+            </li>
+            <li class="testimonials__item">
+              <article class="testimonial-card">
+                <blockquote class="testimonial-card__quote">
+                  <p>
+                    Switching to AIChefMate has been a revelation for my meal prep routine. The AI-generated
+                    plans are spot-on with my tastes and nutritional needs, making healthy eating effortless
+                    and enjoyable.
+                  </p>
+                </blockquote>
+                <img
+                  class="testimonial-card__quote-icon"
+                  src="/src/assets/icons/icon-quote-light.svg"
+                  alt=""
+                  aria-hidden="true"
+                  width="29"
+                  height="21"
+                  decoding="async"
+                />
+                <footer class="testimonial-card__author">
+                  <img
+                    class="testimonial-card__avatar"
+                    src="/src/assets/images/avatar-rebecca.webp"
+                    alt="Portrait of Rebecca R."
+                    width="60"
+                    height="60"
+                    decoding="async"
+                    loading="lazy"
+                  />
+                  <cite class="testimonial-card__name">Rebecca S.</cite>
+                </footer>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="pricing" id="pricing" aria-labelledby="pricing-title">
+        <div class="pricing__container container">
+          <header class="pricing__header section-header">
+            <h2 class="pricing__title section-header__title" id="pricing-title">Pricing</h2>
+            <img
+              class="section-header__line"
+              src="/src/assets/icons/section-heading-line.svg"
+              alt=""
+              aria-hidden="true"
+              width="100"
+              height="87"
+              decoding="async"
+            />
+            <p class="pricing__text section-header__text">
+              Find your perfect plan: tailored pricing for every need
+            </p>
+          </header>
+
+          <div class="pricing__layout">
+            <figure class="pricing__side-photo pricing__side-photo--start" aria-hidden="true">
+              <img
+                src="/src/assets/images/pricing-side-greens.webp"
+                alt=""
+                width="521"
+                height="781"
+                decoding="async"
+                loading="lazy"
+              />
+            </figure>
+
+            <ul class="pricing__plans">
+              <li class="pricing__plan">
+                <article class="pricing-card">
+                  <h3 class="pricing-card__name">Free Plan</h3>
+                  <p class="pricing-card__price"><span class="pricing-card__amount">$0</span> per month</p>
+                  <ul class="pricing-card__features">
+                    <li>Basic AI meal planning</li>
+                    <li>Limited recipe access</li>
+                    <li>Manual grocery list creation</li>
+                  </ul>
+                  <p class="pricing-card__best-for">
+                    <strong>Best For:</strong> Those who want to explore the platform's basic functionalities.
+                  </p>
+                  <a class="pricing-card__cta button button--outline" href="/signup">Get Started For Free</a>
+                </article>
+              </li>
+              <li class="pricing__plan">
+                <article class="pricing-card pricing-card--featured" aria-current="true">
+                  <h3 class="pricing-card__name">Standard Plan</h3>
+                  <p class="pricing-card__price"><span class="pricing-card__amount">$9.99</span> per month</p>
+                  <ul class="pricing-card__features">
+                    <li>Comprehensive AI meal planning</li>
+                    <li>Full recipe library access</li>
+                    <li>Automated grocery lists</li>
+                    <li>Grocery delivery integration</li>
+                  </ul>
+                  <p class="pricing-card__best-for">
+                    <strong>Best For:</strong> Individuals or families looking for full meal planning support
+                    and convenience.
+                  </p>
+                  <a class="pricing-card__cta button button--primary" href="/signup?plan=standard">Subscribe Now</a>
+                </article>
+              </li>
+              <li class="pricing__plan">
+                <article class="pricing-card">
+                  <h3 class="pricing-card__name">Premium Plan</h3>
+                  <p class="pricing-card__price"><span class="pricing-card__amount">$19.99</span> per month</p>
+                  <ul class="pricing-card__features">
+                    <li>All Standard features</li>
+                    <li>Exclusive gourmet recipes</li>
+                    <li>Nutritional consultations</li>
+                    <li>Advanced customization options</li>
+                  </ul>
+                  <p class="pricing-card__best-for">
+                    <strong>Best For:</strong> Users seeking a premium culinary experience with added
+                    personalization and expert guidance.
+                  </p>
+                  <a class="pricing-card__cta button button--outline" href="/signup?plan=premium">Go Premium</a>
+                </article>
+              </li>
+            </ul>
+
+            <figure class="pricing__side-photo pricing__side-photo--end" aria-hidden="true">
+              <img
+                src="/src/assets/images/pricing-side-greens.webp"
+                alt=""
+                width="521"
+                height="781"
+                decoding="async"
+                loading="lazy"
+              />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="blog" id="blog" aria-labelledby="blog-title">
+        <img
+          class="blog__background"
+          src="/src/assets/images/blog-section-background.svg"
+          alt=""
+          aria-hidden="true"
+          width="1920"
+          height="1375"
+          decoding="async"
+        />
+
+        <div class="blog__container container">
+          <header class="blog__header section-header">
+            <h2 class="blog__title section-header__title" id="blog-title">Healthy Insights</h2>
+            <img
+              class="section-header__line"
+              src="/src/assets/icons/section-heading-line.svg"
+              alt=""
+              aria-hidden="true"
+              width="100"
+              height="87"
+              decoding="async"
+            />
+            <p class="blog__text section-header__text">
+              Latest News, Expert Blogs, and Nutritional Learning
+            </p>
+          </header>
+
+          <ul class="blog__list">
+            <li class="blog__item">
+              <article class="blog-card">
+                <img
+                  class="blog-card__image"
+                  src="/src/assets/images/blog-card-salad.webp"
+                  alt="Blog card salad photo"
+                  width="473"
+                  height="473"
+                  decoding="async"
+                  loading="lazy"
+                />
+                <h3 class="blog-card__title">Mastering Meal Prep: Time-Saving Tips for Busy Weekdays</h3>
+                <a
+                  class="blog-card__link button"
+                  href="/blog/meal-prep-tips"
+                  aria-label="Read article: Mastering Meal Prep: Time-Saving Tips for Busy Weekdays"
+                >
+                  Read Article
+                </a>
+              </article>
+            </li>
+            <li class="blog__item">
+              <article class="blog-card">
+                <img
+                  class="blog-card__image"
+                  src="/src/assets/images/blog-card-garden.webp"
+                  alt="Blog card garden photo"
+                  width="473"
+                  height="473"
+                  decoding="async"
+                  loading="lazy"
+                />
+                <h3 class="blog-card__title">The Power of Plant-Based: Benefits Beyond the Plate</h3>
+                <a
+                  class="blog-card__link button"
+                  href="/blog/plant-based-benefits"
+                  aria-label="Read article: The Power of Plant-Based: Benefits Beyond the Plate"
+                >
+                  Read Article
+                </a>
+              </article>
+            </li>
+            <li class="blog__item">
+              <article class="blog-card">
+                <img
+                  class="blog-card__image"
+                  src="/src/assets/images/photo-greens-bowl.webp"
+                  alt="Bowl of greens and soup"
+                  width="473"
+                  height="473"
+                  decoding="async"
+                  loading="lazy"
+                />
+                <h3 class="blog-card__title">Balancing Nutrients: A Guide to a Well-Rounded Diet</h3>
+                <a
+                  class="blog-card__link button"
+                  href="/blog/balancing-nutrients"
+                  aria-label="Read article: Balancing Nutrients: A Guide to a Well-Rounded Diet"
+                >
+                  Read Article
+                </a>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="faq" id="faq" aria-labelledby="faq-title">
+        <div class="faq__container container">
+          <header class="faq__header section-header">
+            <h2 class="faq__title section-header__title" id="faq-title">Frequently Asked Questions</h2>
+            <img
+              class="section-header__line"
+              src="/src/assets/icons/section-heading-line.svg"
+              alt=""
+              aria-hidden="true"
+              width="100"
+              height="87"
+              decoding="async"
+            />
+            <p class="faq__text section-header__text">Meal planning made easy: your questions, answered</p>
+          </header>
+
+          <div class="faq__list">
+            <details class="faq-item" open>
+              <summary class="faq-item__question">
+                How does the AI create personalized meal plans?
+              </summary>
+              <div class="faq-item__answer">
+                <p>
+                  Our AI system analyzes your dietary preferences, health goals, and budget to curate meal
+                  plans that are unique to you. It continually learns from your feedback and choices to
+                  improve its suggestions over time.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item" open>
+              <summary class="faq-item__question">
+                Can I integrate special dietary requirements into my meal plan?
+              </summary>
+              <div class="faq-item__answer">
+                <p>
+                  Absolutely! Our platform is designed to accommodate a range of dietary needs, including
+                  vegetarian, vegan, gluten-free, and keto options. Just specify your requirements in your
+                  profile, and your meal plans will be adjusted accordingly.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-item__question">How does the grocery delivery service work?</summary>
+              <div class="faq-item__answer">
+                <!-- TODO: Replace with final Figma answer copy -->
+                <p>Grocery delivery integrates with your meal plan shopping list through partner stores.</p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-item__question">
+                How does the platform accommodate allergies and food sensitivities?
+              </summary>
+              <div class="faq-item__answer">
+                <!-- TODO: Replace with final Figma answer copy -->
+                <p>Specify allergies in your profile and meal plans will exclude those ingredients.</p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-item__question">Are there options for budget-conscious users?</summary>
+              <div class="faq-item__answer">
+                <!-- TODO: Replace with final Figma answer copy -->
+                <p>Yes — meal plans and grocery lists optimize for cost and reduce waste.</p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-item__question">
+                Can I adjust my meal plans after they've been created?
+              </summary>
+              <div class="faq-item__answer">
+                <!-- TODO: Replace with final Figma answer copy -->
+                <p>You can swap recipes and regenerate plans at any time from your dashboard.</p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-item__question">
+                How can I access nutrition education and healthy eating tips?
+              </summary>
+              <div class="faq-item__answer">
+                <!-- TODO: Replace with final Figma answer copy -->
+                <p>Visit Healthy Insights for articles, guides, and expert nutrition content.</p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-item__question">
+                What makes your AI-driven meal planning different from other meal planning services?
+              </summary>
+              <div class="faq-item__answer">
+                <!-- TODO: Replace with final Figma answer copy -->
+                <p>
+                  AIChefMate learns from your feedback and adapts plans to your tastes, budget, and health
+                  goals over time.
+                </p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-support" id="cta-support" aria-labelledby="cta-support-title">
+        <div class="cta-support__container container">
+          <header class="cta-support__header section-header">
+            <h2 class="cta-support__title section-header__title" id="cta-support-title">Need Assistance?</h2>
+            <img
+              class="section-header__line"
+              src="/src/assets/icons/section-heading-line.svg"
+              alt=""
+              aria-hidden="true"
+              width="100"
+              height="87"
+              decoding="async"
+            />
+            <p class="cta-support__text section-header__text">We're here to help!</p>
+          </header>
+
+          <div class="cta-support__layout">
+            <figure class="cta-support__media">
+              <img
+                class="cta-support__image"
+                src="/src/assets/images/assistance-produce-box.webp"
+                alt="Hands packing produce into a box"
+                width="1045"
+                height="610"
+                decoding="async"
+                loading="lazy"
+              />
+            </figure>
+
+            <div class="cta-support__content">
+              <p class="cta-support__body">
+                Have questions or need help with AIChefMate? Our dedicated support team is ready to assist
+                you. Get the answers and assistance you need to make the most of your meal planning
+                experience.
+              </p>
+              <a class="cta-support__button button button--primary" href="/support">Get Support</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__container container">
+        <div class="site-footer__content">
+          <div class="site-footer__brand">
+            <a class="site-footer__logo" href="/" aria-label="AIChefMate home">
+              <img
+                class="site-footer__logo-image"
+                src="/src/assets/logos/logo.svg"
+                alt="AIChefMate"
+                width="74"
+                height="50"
+                decoding="async"
+                loading="lazy"
+              />
+            </a>
+
+            <nav class="site-footer__nav" aria-label="Footer navigation">
+              <ul class="site-footer__nav-list site-footer__nav-list--primary">
+                <li class="site-footer__nav-item">
+                  <a class="site-footer__nav-link" href="#recipes-preview">Recipes</a>
+                </li>
+                <li class="site-footer__nav-item">
+                  <a class="site-footer__nav-link" href="#blog">Blog</a>
+                </li>
+              </ul>
+              <ul class="site-footer__nav-list site-footer__nav-list--secondary">
+                <li class="site-footer__nav-item">
+                  <a class="site-footer__nav-link" href="#cta-support">Customer Support</a>
+                </li>
+                <li class="site-footer__nav-item">
+                  <a class="site-footer__nav-link" href="/profile">Your Profile</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <p class="site-footer__blurb">
+            Join us on our journey to make meal planning simple and joyful. Connect with us on social media,
+            explore our FAQs for quick answers, or drop us a line anytime.
+          </p>
+
+          <ul class="site-footer__social">
+            <li class="site-footer__social-item">
+              <a class="site-footer__social-link" href="https://facebook.com" aria-label="AIChefMate on Facebook">
+                <img
+                  src="/src/assets/icons/social-facebook.svg"
+                  alt=""
+                  aria-hidden="true"
+                  width="50"
+                  height="50"
+                  decoding="async"
+                  loading="lazy"
+                />
+              </a>
+            </li>
+            <li class="site-footer__social-item">
+              <a class="site-footer__social-link" href="https://instagram.com" aria-label="AIChefMate on Instagram">
+                <img
+                  src="/src/assets/icons/social-instagram.svg"
+                  alt=""
+                  aria-hidden="true"
+                  width="50"
+                  height="50"
+                  decoding="async"
+                  loading="lazy"
+                />
+              </a>
+            </li>
+            <li class="site-footer__social-item">
+              <a class="site-footer__social-link" href="https://linkedin.com" aria-label="AIChefMate on LinkedIn">
+                <img
+                  src="/src/assets/icons/social-linkedin.svg"
+                  alt=""
+                  aria-hidden="true"
+                  width="50"
+                  height="50"
+                  decoding="async"
+                  loading="lazy"
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <p class="site-footer__copyright">
+          © 2064 AIChefMate. All rights reserved.
+          <a class="site-footer__legal-link" href="/privacy">Privacy Policy</a>
+          <a class="site-footer__legal-link" href="/terms">Terms of Use</a>
+        </p>
+      </div>
+    </footer>
+
     <script type="module" src="/src/scripts/main.js"></script>
   </body>
 </html>
