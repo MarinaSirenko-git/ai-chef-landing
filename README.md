@@ -2,7 +2,7 @@
 
 Marketing landing page for AI Chef — a lightweight, accessible static site built with Vite.
 
-**Demo:** *Coming soon*
+**Demo:** [https://ai-chef-landing.marina-sirenko1-80f.workers.dev/](https://ai-chef-landing.marina-sirenko1-80f.workers.dev/)
 
 ## Stack
 
