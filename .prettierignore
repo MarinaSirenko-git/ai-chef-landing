@@ -1,0 +1,7 @@
+node_modules
+dist
+build
+.cursor-output
+.cursor
+src/assets/source
+package-lock.json

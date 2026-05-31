@@ -13,16 +13,6 @@ img {
 
 [class$='__image'] {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
-}
-
-.site-header__logo-image,
-.site-footer__logo-image,
-.hero__icon-image,
-.demo__play-icon,
-.testimonial-card__quote-icon,
-.site-footer__social-icon {
-  width: auto;
-  object-fit: contain;
 }

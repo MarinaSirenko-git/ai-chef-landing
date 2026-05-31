@@ -21,6 +21,8 @@
   --color-button-primary-text: var(--color-text-inverted);
   --color-button-secondary-bg: transparent;
   --color-button-secondary-text: var(--color-text);
+  --color-button-tertiary-bg: var(--color-light-green);
+  --color-button-tertiary-text: var(--color-text);
   --color-button-outline-border: var(--color-border);
 
   /* Typography — font stacks (inferred) */
@@ -93,7 +95,7 @@
   --space-140: 140px;
 
   /* Layout — inferred (desktop artboard 1920px) */
-  --container-width: 1920px;
+  --container-width: 1640px;
   --container-padding: 140px;
   --container-padding-wide: 70px;
   --section-padding-y: 100px;
@@ -109,7 +111,7 @@
   --radius-oval-sm: 240px;
   --radius-oval-lg: 266px;
   --radius-capsule: 1000px;
-  --radius-card: var(--radius-sm);
+  --radius-card: var(--radius-md);
 
   /* Shadows — no reliable value found in Figma */
   --shadow-card: none;

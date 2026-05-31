@@ -15,6 +15,7 @@ dist-ssr
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
+!.vscode/settings.json
 .idea
 .DS_Store
 *.suo
@@ -42,3 +43,6 @@ tmp
 # AI / Cursor generated working files
 .cursor-output/
 .cursor/tmp/
+
+# Full-resolution design export masters (production uses optimized siblings)
+src/assets/source/

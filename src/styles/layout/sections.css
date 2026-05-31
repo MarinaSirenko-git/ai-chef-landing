@@ -3,12 +3,8 @@ section {
 }
 
 .section-header {
-  display: grid;
-  gap: var(--space-28, 28px);
-  margin-bottom: var(--space-100, 100px);
-}
-
-.section-header__line {
-  width: 100px;
-  height: auto;
+  display: flex;
+  align-items: center;
+  gap: 106px;
+  margin-bottom: 90px;
 }

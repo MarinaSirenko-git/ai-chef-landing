@@ -18,12 +18,12 @@ The goal was not to replace manual development, but to reduce repetitive scaffol
 
 Commands run during initial project setup:
 
-| Command | Purpose |
-| --- | --- |
-| `create-landing-starter-html` | Vite vanilla scaffold, folder structure, GSAP, minimal HTML skeleton |
-| `setup-styles-css` | Layered CSS architecture (reset, variables, layout, components, utilities) |
-| `setup-project-readme` | Project README with stack, scripts, and deployment notes |
-| `setup-agent-doc` | This workflow document |
+| Command                       | Purpose                                                                    |
+| ----------------------------- | -------------------------------------------------------------------------- |
+| `create-landing-starter-html` | Vite vanilla scaffold, folder structure, GSAP, minimal HTML skeleton       |
+| `setup-styles-css`            | Layered CSS architecture (reset, variables, layout, components, utilities) |
+| `setup-project-readme`        | Project README with stack, scripts, and deployment notes                   |
+| `setup-agent-doc`             | This workflow document                                                     |
 
 Commands available for later steps (not run yet):
 
@@ -70,14 +70,14 @@ The developer should review and own:
 
 ## Quality Checks
 
-| Check | Status |
-| --- | --- |
-| `npm run build` | Passed during scaffold and CSS setup |
-| Accessibility | Base only — skip link, semantic landmarks, `prefers-reduced-motion` utility |
-| Performance audit | Not run (`run-web-perf-audit` available) |
-| Responsive layout | CSS variables adjust at `768px`; full section layouts pending |
-| Git workflow | Not initialized yet |
-| Deployment | Documented; not live |
+| Check             | Status                                                                      |
+| ----------------- | --------------------------------------------------------------------------- |
+| `npm run build`   | Passed during scaffold and CSS setup                                        |
+| Accessibility     | Base only — skip link, semantic landmarks, `prefers-reduced-motion` utility |
+| Performance audit | Not run (`run-web-perf-audit` available)                                    |
+| Responsive layout | CSS variables adjust at `768px`; full section layouts pending               |
+| Git workflow      | Not initialized yet                                                         |
+| Deployment        | Documented; not live                                                        |
 
 ## Notes
 

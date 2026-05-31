@@ -8,9 +8,12 @@
     "build": "vite build",
     "preview": "vite preview",
     "dev:cf": "wrangler dev",
-    "deploy": "npm run build && wrangler deploy"
+    "deploy": "npm run build && wrangler deploy",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "devDependencies": {
+    "prettier": "^3.8.3",
     "vite": "^8.0.12",
     "wrangler": "^4.94.0"
   },

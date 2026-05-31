@@ -12,7 +12,20 @@
   line-height: var(--text-body-line-height, 1.4);
   font-weight: var(--text-body-weight, 400);
   color: var(--color-text);
-  max-width: 52rem;
+  max-width: 435px;
+  position: relative;
+}
+
+.section-text::before {
+  content: '';
+  position: absolute;
+  top: -25px;
+  display: block;
+  width: 2px;
+  height: 100px;
+  background-color: var(--color-green);
+  transform: rotate(30deg);
+  left: -55px;
 }
 
 .eyebrow {
@@ -20,7 +33,6 @@
   font-size: clamp(0.875rem, 1.5vw, var(--text-eyebrow-size, 26px));
   line-height: var(--text-subheading-line-height, 1.2);
   font-weight: var(--text-subheading-weight, 400);
-  letter-spacing: 0.02em;
 }
 
 .card-title {
