@@ -48,22 +48,20 @@
 
 .hero__gallery {
   display: grid;
-  grid-template-columns: 290px 275px 390px 290px 275px;
+  grid-template-columns: 275px 390px 290px;
   grid-template-rows: 1fr;
   gap: 30px;
   height: 530px;
   margin-top: -20px;
 }
 
-.hero__gallery-item--stat-start {
-  height: 491px;
-  align-self: start;
+.hero__gallery-item--image-start {
   position: relative;
   overflow: visible;
 }
 
-.hero__gallery-item--stat-start::before,
-.hero__gallery-item--stat-start::after,
+.hero__gallery-item--image-start::before,
+.hero__gallery-item--image-start::after,
 .hero__gallery-item--stat-end::before,
 .hero__gallery-item--stat-end::after {
   content: '';
@@ -72,9 +70,9 @@
   background-repeat: no-repeat;
 }
 
-.hero__gallery-item--stat-start::before {
-  top: -25px;
-  right: -80px;
+.hero__gallery-item--image-start::before {
+  top: -260px;
+  left: -20px;
   width: 50px;
   height: 50px;
   border: 1px solid black;
@@ -84,9 +82,9 @@
   background-position: center;
 }
 
-.hero__gallery-item--stat-start::after {
+.hero__gallery-item--image-start::after {
   top: -140px;
-  right: 0;
+  left: 0;
   width: 66px;
   height: 66px;
   background-image: url('../../assets/icons/icon-ingredients.webp');

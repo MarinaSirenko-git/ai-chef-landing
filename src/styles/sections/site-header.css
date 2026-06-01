@@ -2,7 +2,7 @@
   position: relative;
   top: 0;
   z-index: 100;
-  padding: 70px 0 50px;
+  padding: 40px 0 50px;
   background: var(--color-light);
 }
 
@@ -44,6 +44,7 @@
   font-weight: var(--text-nav-weight, 400);
   text-decoration: none;
   transition: opacity var(--transition-base, 200ms ease);
+  text-wrap: nowrap;
 }
 
 .site-header__nav-link:hover {

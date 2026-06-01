@@ -91,24 +91,6 @@
           </div>
 
           <ul class="hero__gallery">
-            <li class="hero__gallery-item hero__gallery-item--stat-start">
-              <article class="hero-stat-card">
-                <p class="hero-stat-card__value">95%</p>
-                <p class="hero-stat-card__label">Improved Eating Habits</p>
-                <picture class="hero-stat-card__picture">
-                  <source srcset="/src/assets/images/photo-vegetables.webp" type="image/webp" />
-
-                  <img
-                    class="hero-stat-card__image"
-                    src="/src/assets/images/photo-vegetables.jpg"
-                    alt=""
-                    width="260"
-                    height="293"
-                    decoding="async"
-                  />
-                </picture>
-              </article>
-            </li>
             <li class="hero__gallery-item hero__gallery-item--image-start">
               <picture class="hero__picture">
                 <source srcset="/src/assets/images/photo-meal-center.webp" type="image/webp" />
@@ -151,19 +133,6 @@
                 <p class="hero-stat-card__value">25%</p>
                 <p class="hero-stat-card__label">Saved on Groceries</p>
               </article>
-            </li>
-            <li class="hero__gallery-item hero__gallery-item--image-end">
-              <picture class="hero__picture">
-                <source srcset="/src/assets/images/photo-greens-bowl.webp" type="image/webp" />
-                <img
-                  class="hero__image hero__image--secondary"
-                  src="/src/assets/images/photo-greens-bowl.jpg"
-                  alt="Bowl of greens and soup"
-                  width="275"
-                  height="491"
-                  decoding="async"
-                />
-              </picture>
             </li>
           </ul>
         </div>
@@ -220,123 +189,126 @@
         <div class="process__container container">
           <header class="process__header section-header">
             <h2 class="process__title section-title" id="process-title">How it works</h2>
-            <img
-              class="section-header__line"
-              src="/src/assets/icons/section-heading-line.svg"
-              alt=""
-              aria-hidden="true"
-              width="100"
-              height="87"
-              decoding="async"
-            />
             <p class="process__text section-text">
               Step into the world of hassle-free meal planning with our easy 3-step process
             </p>
           </header>
 
-          <div class="process__layout">
-            <ol class="process__list">
-              <li class="process__item">
-                <article class="process-card">
-                  <p class="process-card__step">
-                    <span class="process-card__number">01</span> / 03
-                  </p>
-                  <h3 class="process-card__title card-title">Personalize Your Profile</h3>
-                  <p class="process-card__text card-text">
-                    Begin by creating your profile. Tell us about your dietary preferences,
-                    nutritional goals, and budget. Our AI technology tailors every meal plan to fit
-                    your unique needs.
-                  </p>
-                </article>
-              </li>
-              <li class="process__item">
-                <article class="process-card">
-                  <p class="process-card__step">
-                    <span class="process-card__number">02</span> / 03
-                  </p>
-                  <h3 class="process-card__title card-title">Receive Your Meal Plan</h3>
-                  <!-- TODO: Replace with final Figma text for step 02 -->
-                  <p class="process-card__text card-text">
-                    Get AI-generated weekly meal plans matched to your preferences and schedule.
-                  </p>
-                </article>
-              </li>
-              <li class="process__item">
-                <article class="process-card">
-                  <p class="process-card__step">
-                    <span class="process-card__number">03</span> / 03
-                  </p>
-                  <h3 class="process-card__title card-title">Cook and Enjoy</h3>
-                  <!-- TODO: Replace with final Figma text for step 03 -->
-                  <p class="process-card__text card-text">
-                    Follow simple recipes, shop smarter, and enjoy healthier meals every day.
-                  </p>
-                </article>
-              </li>
-            </ol>
+          <div class="process__layout" data-process-slider>
+            <div class="process__content">
+              <ol class="process__list">
+                <li class="process__item is-active" data-process-slide>
+                  <article class="process-card">
+                    <p class="process-card__step">
+                      <span class="process-card__number" data-process-current>01</span>
+                    </p>
+                    <h3 class="process-card__title card-title">Personalize Your Profile</h3>
+                    <p class="process-card__text card-text">
+                      Begin by creating your profile. Tell us about your dietary preferences,
+                      nutritional goals, and budget. Our AI technology tailors every meal plan to fit
+                      your unique needs.
+                    </p>
+                  </article>
+                </li>
+                <li class="process__item" data-process-slide hidden>
+                  <article class="process-card">
+                    <p class="process-card__step">
+                      <span class="process-card__number" data-process-current>02</span>
+                    </p>
+                    <h3 class="process-card__title card-title">Receive Your Meal Plan</h3>
+                    <p class="process-card__text card-text">
+                      Get AI-generated weekly meal plans matched to your preferences and schedule.
+                    </p>
+                  </article>
+                </li>
+                <li class="process__item" data-process-slide hidden>
+                  <article class="process-card">
+                    <p class="process-card__step">
+                      <span class="process-card__number" data-process-current>03</span>
+                    </p>
+                    <h3 class="process-card__title card-title">Cook and Enjoy</h3>
+                    <p class="process-card__text card-text">
+                      Follow simple recipes, shop smarter, and enjoy healthier meals every day.
+                    </p>
+                  </article>
+                </li>
+              </ol>
 
-            <div class="process__gallery">
-              <picture class="process__picture">
-                <source srcset="/src/assets/images/how-it-works-photo-mid.webp" type="image/webp" />
+              <div class="process__footer">
+                <div class="process__controls">
+                  <button
+                    class="process__control process__control--prev button button--outline"
+                    type="button"
+                    aria-label="Previous step"
+                    disabled
+                  >
+                    <span aria-hidden="true">←</span>
+                  </button>
+                  <button
+                    class="process__control process__control--next button button--tertiary"
+                    type="button"
+                    aria-label="Next step"
+                  >
+                    <span aria-hidden="true">→</span>
+                  </button>
+                </div>
+                <p class="process__counter" aria-live="polite">
+                  <span data-process-current>01</span>/03
+                </p>
+              </div>
+            </div>
 
+            <div
+              class="process__gallery"
+              data-process-gallery
+              data-process-step="1"
+              aria-live="polite"
+            >
+              <picture class="process__picture process__picture--back">
+                <source
+                  srcset="/src/assets/images/how-it-works-photo-mid.webp"
+                  type="image/webp"
+                />
                 <img
-                  class="process__photo process__photo--back"
+                  class="process__photo"
                   src="/src/assets/images/how-it-works-photo-mid.jpg"
-                  alt=""
-                  aria-hidden="true"
-                  width="448"
-                  height="537"
+                  alt="Fresh ingredients ready to cook"
+                  data-process-alt="Fresh ingredients ready to cook"
+                  width="568"
+                  height="682"
                   decoding="async"
                   loading="lazy"
                 />
               </picture>
-              <picture class="process__picture">
+              <picture class="process__picture process__picture--mid">
+                <source srcset="/src/assets/images/photo-meal-center.webp" type="image/webp" />
+                <img
+                  class="process__photo"
+                  src="/src/assets/images/photo-meal-center.jpg"
+                  alt="AI-generated weekly meal plan preview"
+                  data-process-alt="AI-generated weekly meal plan preview"
+                  width="568"
+                  height="682"
+                  decoding="async"
+                  loading="lazy"
+                />
+              </picture>
+              <picture class="process__picture process__picture--front">
                 <source
                   srcset="/src/assets/images/how-it-works-photo-front.webp"
                   type="image/webp"
                 />
-
                 <img
-                  class="process__photo process__photo--mid"
+                  class="process__photo"
                   src="/src/assets/images/how-it-works-photo-front.jpg"
                   alt="Person enjoying a home-cooked meal"
+                  data-process-alt="Person enjoying a home-cooked meal"
                   width="568"
                   height="682"
                   decoding="async"
                   loading="lazy"
                 />
               </picture>
-              <picture class="process__photo__picture">
-                <source srcset="/src/assets/images/photo-meal-center.webp" type="image/webp" />
-
-                <img
-                  class="process__photo process__photo--front"
-                  src="/src/assets/images/photo-meal-center.jpg"
-                  alt=""
-                  aria-hidden="true"
-                  width="568"
-                  height="682"
-                  decoding="async"
-                  loading="lazy"
-                />
-              </picture>
-            </div>
-
-            <div class="process__controls">
-              <button
-                class="process__control process__control--prev button"
-                type="button"
-                aria-label="Previous step"
-              >
-                Previous
-              </button>
-              <button
-                class="process__control process__control--next button"
-                type="button"
-                aria-label="Next step"
-              >
-                Next
-              </button>
             </div>
           </div>
         </div>
