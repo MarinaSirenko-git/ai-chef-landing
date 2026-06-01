@@ -1,9 +1,9 @@
 body {
   min-height: 100svh;
   font-family: var(--font-main, system-ui, sans-serif);
-  color: var(--color-text, #213d34);
-  background: var(--color-bg, #ffffff);
-  line-height: var(--text-body-line-height, 1.4);
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.4;
 }
 
 main {
