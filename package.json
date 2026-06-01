@@ -16,8 +16,5 @@
     "prettier": "^3.8.3",
     "vite": "^8.0.12",
     "wrangler": "^4.94.0"
-  },
-  "dependencies": {
-    "gsap": "^3.15.0"
   }
 }

@@ -69,22 +69,23 @@ npm run preview
 
 ## Deployment
 
-This project is configured for Cloudflare Workers Static Assets deployment.
+This project is deployed to Cloudflare Workers Static Assets.
+
+### Production URL
+
+[View deployed site](https://ai-chef-landing.marina-sirenko1-80f.workers.dev)
+
+### Deploy command
+
+```bash
+npm run deploy
+```
 
 ### Local Cloudflare preview
 
 ```bash
 npm run dev:cf
 ```
-
-### Deploy
-
-```bash
-npx wrangler login
-npm run deploy
-```
-
-After deployment, Cloudflare will provide a `*.workers.dev` URL.
 
 ### Performance audit
 
