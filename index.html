@@ -346,15 +346,6 @@
         <div class="benefits__container container">
           <header class="benefits__header section-header">
             <h2 class="benefits__title section-title" id="benefits-title">Benefits</h2>
-            <img
-              class="section-header__line"
-              src="/src/assets/icons/section-heading-line.svg"
-              alt=""
-              aria-hidden="true"
-              width="100"
-              height="87"
-              decoding="async"
-            />
             <p class="benefits__text section-text">
               Get meal plans tailored to your unique dietary needs, preferences, and goals, ensuring
               a balanced and enjoyable diet.
@@ -389,7 +380,7 @@
               </figure>
             </li>
             <li class="benefits__item">
-              <article class="benefit-card">
+              <article class="benefit-card benefit-card--plain">
                 <h3 class="benefit-card__title card-title">Time-Saving Convenience</h3>
                 <p class="benefit-card__text card-text">
                   Say goodbye to meal planning stress. Our AI-driven platform simplifies your weekly
@@ -407,7 +398,7 @@
               </article>
             </li>
             <li class="benefits__item">
-              <article class="benefit-card">
+              <article class="benefit-card benefit-card--plain">
                 <h3 class="benefit-card__title card-title">Cost-Effective Shopping</h3>
                 <p class="benefit-card__text card-text">
                   Reduce food waste and save money with efficient grocery shopping lists that align
@@ -416,7 +407,7 @@
               </article>
             </li>
             <li class="benefits__item">
-              <article class="benefit-card">
+              <article class="benefit-card benefit-card--plain">
                 <h3 class="benefit-card__title card-title">Seamless Grocery Delivery</h3>
                 <p class="benefit-card__text card-text">
                   Enjoy the convenience of having all your meal ingredients delivered right to your
@@ -433,8 +424,8 @@
                 </p>
               </article>
             </li>
-            <li class="benefits__item benefits__item--photo">
-              <figure class="benefit-card benefit-card--photo">
+            <li class="benefits__item benefits__item--photo benefits__item--photo-round">
+              <figure class="benefit-card benefit-card--photo benefit-card--photo-round">
                 <picture class="benefit-card__picture">
                   <source srcset="/src/assets/images/photo-vegetables.webp" type="image/webp" />
 
@@ -458,15 +449,6 @@
         <div class="recipes-preview__container container">
           <header class="recipes-preview__header section-header">
             <h2 class="recipes-preview__title section-title" id="recipes-preview-title">Recipes</h2>
-            <img
-              class="section-header__line"
-              src="/src/assets/icons/section-heading-line.svg"
-              alt=""
-              aria-hidden="true"
-              width="100"
-              height="87"
-              decoding="async"
-            />
             <p class="recipes-preview__text section-text">
               Recipes crafted by AI, personalized to perfectly align with your unique dietary needs
               and flavor preferences
@@ -481,11 +463,11 @@
                     Savory Quinoa and Roasted Vegetable Bowl
                   </h3>
                   <a
-                    class="recipe-card__link button"
+                    class="recipe-card__link button button--tertiary"
                     href="/recipes/quinoa-bowl"
                     aria-label="Learn more: Savory Quinoa and Roasted Vegetable Bowl"
                   >
-                    Learn More
+                    Learn More →
                   </a>
                   <picture class="recipe-card__picture">
                     <source srcset="/src/assets/images/recipe-quinoa-bowl.webp" type="image/webp" />
@@ -521,11 +503,11 @@
                     Herb-Infused Grilled Chicken with Seasonal Greens
                   </h3>
                   <a
-                    class="recipe-card__link button"
+                    class="recipe-card__link button button--outline"
                     href="/recipes/grilled-chicken"
                     aria-label="Learn more: Herb-Infused Grilled Chicken with Seasonal Greens"
                   >
-                    Learn More
+                    Learn More →
                   </a>
                 </article>
               </li>
@@ -533,11 +515,11 @@
                 <article class="recipe-card recipe-card--surface">
                   <h3 class="recipe-card__title card-title">Mediterranean Lentil and Kale Salad</h3>
                   <a
-                    class="recipe-card__link button"
+                    class="recipe-card__link button button--tertiary"
                     href="/recipes/lentil-salad"
                     aria-label="Learn more: Mediterranean Lentil and Kale Salad"
                   >
-                    Learn More
+                    Learn More →
                   </a>
                   <picture class="recipe-card__picture">
                     <source
@@ -557,29 +539,31 @@
                   </picture>
                 </article>
               </li>
+              <li class="recipes-preview__item">
+                <figure class="recipes-preview__featured">
+                  <figcaption class="recipes-preview__featured-caption">
+                    <a class="recipes-preview__explore" href="/recipes"
+                      ><span>Explore more recipes</span> <span aria-hidden="true">→</span></a>
+                  </figcaption>
+                  <picture class="recipes-preview__picture">
+                    <source
+                      srcset="/src/assets/images/recipes-featured-spread.webp"
+                      type="image/webp"
+                    />
+    
+                    <img
+                      class="recipes-preview__featured-image"
+                      src="/src/assets/images/recipes-featured-spread.jpg"
+                      alt="Large featured recipes food spread"
+                      width="778"
+                      height="960"
+                      decoding="async"
+                      loading="lazy"
+                    />
+                  </picture>
+                </figure>
+              </li>
             </ul>
-
-            <figure class="recipes-preview__featured">
-              <figcaption class="recipes-preview__featured-caption">
-                <a class="recipes-preview__explore" href="/recipes">Explore more recipes</a>
-              </figcaption>
-              <picture class="recipes-preview__picture">
-                <source
-                  srcset="/src/assets/images/recipes-featured-spread.webp"
-                  type="image/webp"
-                />
-
-                <img
-                  class="recipes-preview__featured-image"
-                  src="/src/assets/images/recipes-featured-spread.jpg"
-                  alt="Large featured recipes food spread"
-                  width="778"
-                  height="960"
-                  decoding="async"
-                  loading="lazy"
-                />
-              </picture>
-            </figure>
           </div>
         </div>
       </section>
@@ -588,15 +572,6 @@
         <div class="testimonials__container container">
           <header class="testimonials__header section-header">
             <h2 class="testimonials__title section-title" id="testimonials-title">Testimonials</h2>
-            <img
-              class="section-header__line"
-              src="/src/assets/icons/section-heading-line.svg"
-              alt=""
-              aria-hidden="true"
-              width="100"
-              height="87"
-              decoding="async"
-            />
             <p class="testimonials__text section-text">
               Real stories from satisfied users: see how our platform changes lives
             </p>

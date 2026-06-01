@@ -6,8 +6,6 @@
   padding-bottom: 140px;
 }
 
-/* Side photos are display:none, so ul is the only grid child and would
-   land in column 1 (~0.6fr ≈ 250px). Span all tracks and center the row. */
 .pricing__plans {
   grid-column: 1 / -1;
   justify-self: center;
