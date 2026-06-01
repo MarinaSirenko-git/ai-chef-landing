@@ -6,7 +6,7 @@
 .pricing-card,
 .blog-card,
 .faq-item {
-  border-radius: var(--radius-card, var(--radius-md, 34px));
+  border-radius: 34px;
 }
 
 .hero-stat-card {
@@ -18,11 +18,11 @@
   justify-content: space-between;
   gap: 10px;
   padding: 15px;
-  background: white;
+  background: var(--color-bg);
 }
 
 .hero-stat-card--highlight {
-  background: var(--color-green, #213d34);
+  background: var(--color-green);
   color: var(--color-light-green);
   padding: 50px 0;
   text-align: center;
@@ -31,15 +31,15 @@
 .hero-stat-card__value {
   font-family: var(--font-display);
   font-size: 61px;
-  font-weight: var(--text-h3-weight, 400);
+  font-weight: 400;
   line-height: 1;
   width: 100%;
 }
 
 .hero-stat-card__label {
   font-family: var(--font-main);
-  font-size: var(--text-subheading-size, 26px);
-  line-height: var(--text-subheading-line-height, 1.2);
+  font-size: 26px;
+  line-height: 1.2;
 }
 
 .hero-stat-card__picture {
@@ -48,35 +48,35 @@
 }
 
 .hero-stat-card__image {
-  border-radius: var(--radius-md, 34px);
+  border-radius: 34px;
   object-fit: cover;
 }
 
 .benefit-card {
   display: grid;
-  gap: var(--space-40, 40px);
-  padding: var(--space-50, 50px);
-  background: var(--color-bg, #ffffff);
-  border: var(--border-width, 2px) solid var(--color-border, #213d34);
+  gap: 40px;
+  padding: 50px;
+  background: var(--color-bg);
+  border: 2px solid var(--color-border);
 }
 
 .benefit-card--accent {
-  background: var(--color-accent, var(--color-light-green, #d9ef78));
+  background: var(--color-accent);
 }
 
 .benefit-card--surface {
-  background: var(--color-surface, var(--color-light, #f1f2ed));
+  background: var(--color-surface);
 }
 
 .benefit-card--inverted {
-  background: var(--color-green, #213d34);
-  color: var(--color-beige, #f8f5ef);
+  background: var(--color-green);
+  color: var(--color-beige);
 }
 
 .benefit-card--photo {
   padding: 0;
   overflow: hidden;
-  border-radius: var(--radius-oval-sm, 240px);
+  border-radius: 240px;
 }
 
 .benefit-card__image {
@@ -87,30 +87,30 @@
 
 .process-card {
   display: grid;
-  gap: var(--space-24, 24px);
-  padding: var(--space-50, 50px);
-  background: var(--color-surface, var(--color-light, #f1f2ed));
-  border: var(--border-width, 2px) solid var(--color-border, #213d34);
+  gap: 24px;
+  padding: 50px;
+  background: var(--color-surface);
+  border: 2px solid var(--color-border);
 }
 
 .process-card__step {
   font-family: var(--font-display);
-  font-size: clamp(1.5rem, 3vw, var(--text-h1-size, 61px));
+  font-size: clamp(1.5rem, 3vw, 61px);
   line-height: 1;
   color: var(--color-text);
 }
 
 .process-card__number {
-  font-weight: var(--text-h1-weight, 500);
+  font-weight: 500;
 }
 
 .recipe-card {
   display: grid;
-  gap: var(--space-24, 24px);
+  gap: 24px;
   align-items: center;
-  padding: var(--space-32, 32px) var(--space-40, 40px);
-  border: var(--border-width, 2px) solid var(--color-border, #213d34);
-  border-radius: var(--radius-pill, 50px);
+  padding: 32px 40px;
+  border: 2px solid var(--color-border);
+  border-radius: 50px;
 }
 
 .recipe-card--outline {
@@ -118,15 +118,15 @@
 }
 
 .recipe-card--highlight {
-  background: var(--color-accent, var(--color-light-green, #d9ef78));
+  background: var(--color-accent);
 }
 
 .recipe-card--surface {
-  background: var(--color-surface, var(--color-light, #f1f2ed));
+  background: var(--color-surface);
 }
 
 .recipe-card__image {
-  border-radius: var(--radius-md, 34px);
+  border-radius: 34px;
   object-fit: cover;
 }
 
@@ -141,86 +141,86 @@
 
 .testimonial-card {
   display: grid;
-  gap: var(--space-15, 15px);
-  padding: var(--space-60, 60px) var(--space-50, 50px);
-  background: var(--color-surface, var(--color-light, #f1f2ed));
-  border: var(--border-width, 2px) solid var(--color-border, #213d34);
+  gap: 15px;
+  padding: 60px 50px;
+  background: var(--color-surface);
+  border: 2px solid var(--color-border);
   height: 100%;
 }
 
 .testimonial-card--inverted {
-  background: var(--color-green, #213d34);
-  color: var(--color-beige, #f8f5ef);
+  background: var(--color-green);
+  color: var(--color-beige);
 }
 
 .testimonial-card__quote {
   font-family: var(--font-main);
-  font-size: clamp(1rem, 1.5vw, var(--text-body-size, 22px));
-  line-height: var(--text-body-line-height, 1.4);
+  font-size: clamp(1rem, 1.5vw, 22px);
+  line-height: 1.4;
 }
 
 .testimonial-card__author {
   display: flex;
   align-items: center;
-  gap: var(--space-16, 16px);
+  gap: 16px;
   margin-top: auto;
 }
 
 .testimonial-card__avatar {
   width: 60px;
   height: 60px;
-  border-radius: var(--radius-avatar, 32px);
+  border-radius: 32px;
   object-fit: cover;
 }
 
 .testimonial-card__name {
   font-family: var(--font-main);
-  font-size: var(--text-body-size, 22px);
-  font-weight: var(--text-button-weight, 500);
+  font-size: 22px;
+  font-weight: 500;
 }
 
 .pricing-card {
   display: grid;
-  gap: var(--space-24, 24px);
-  padding: var(--space-50, 50px);
-  background: var(--color-bg, #ffffff);
-  border: var(--border-width, 2px) solid var(--color-border, #213d34);
-  border-radius: var(--radius-lg, 43px);
+  gap: 24px;
+  padding: 50px;
+  background: var(--color-bg);
+  border: 2px solid var(--color-border);
+  border-radius: 43px;
   height: 100%;
 }
 
 .pricing-card--featured {
-  background: var(--color-accent, var(--color-light-green, #d9ef78));
+  background: var(--color-accent);
 }
 
 .pricing-card__price {
   font-family: var(--font-main);
-  font-size: var(--text-body-size, 22px);
+  font-size: 22px;
 }
 
 .pricing-card__amount {
   font-family: var(--font-display);
-  font-size: clamp(2rem, 4vw, var(--text-h2-size, 55px));
-  font-weight: var(--text-h2-weight, 500);
+  font-size: clamp(2rem, 4vw, 55px);
+  font-weight: 500;
 }
 
 .pricing-card__features {
   display: grid;
-  gap: var(--space-16, 16px);
-  padding-block: var(--space-24, 24px);
-  border-block: var(--border-width, 2px) solid var(--color-border, #213d34);
+  gap: 16px;
+  padding-block: 24px;
+  border-block: 2px solid var(--color-border);
 }
 
 .pricing-card__feature {
   font-family: var(--font-main);
-  font-size: var(--text-body-size, 22px);
-  line-height: var(--text-body-line-height, 1.4);
+  font-size: 22px;
+  line-height: 1.4;
 }
 
 .pricing-card__best-for {
   font-family: var(--font-main);
-  font-size: var(--text-body-size, 22px);
-  line-height: var(--text-body-line-height, 1.4);
+  font-size: 22px;
+  line-height: 1.4;
 }
 
 .pricing-card__cta {
@@ -229,46 +229,16 @@
 
 .blog-card {
   display: grid;
-  gap: var(--space-24, 24px);
-  padding: var(--space-50, 50px);
-  background: var(--color-surface, var(--color-light, #f1f2ed));
-  border: var(--border-width, 2px) solid var(--color-border, #213d34);
+  gap: 33px;
+  padding: 30px 30px 70px;
+  background: white;
   height: 100%;
+
 }
 
 .blog-card__image {
   width: 100%;
   aspect-ratio: 1;
-  border-radius: var(--radius-sm, 24px);
+  border-radius: 28px;
   object-fit: cover;
-}
-
-.faq-item {
-  padding: var(--space-40, 40px) var(--space-50, 50px);
-  background: var(--color-surface, var(--color-light, #f1f2ed));
-  border: var(--border-width, 2px) solid var(--color-border, #213d34);
-}
-
-.faq-item[open] {
-  background: var(--color-accent, var(--color-light-green, #d9ef78));
-}
-
-.faq-item__question {
-  cursor: pointer;
-  font-family: var(--font-display);
-  font-size: clamp(1.125rem, 2vw, var(--text-h4-size, 34px));
-  line-height: var(--text-h4-line-height, 1);
-  font-weight: var(--text-h4-weight, 400);
-  list-style: none;
-}
-
-.faq-item__question::-webkit-details-marker {
-  display: none;
-}
-
-.faq-item__answer {
-  padding-top: var(--space-16, 16px);
-  font-family: var(--font-main);
-  font-size: var(--text-body-size, 22px);
-  line-height: var(--text-body-line-height, 1.4);
 }
