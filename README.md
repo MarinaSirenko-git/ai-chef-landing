@@ -130,15 +130,19 @@ npm run preview
 
 ## Deployment
 
-This project is deployed to **Cloudflare Workers Static Assets**.
+This project is deployed to Cloudflare Workers Static Assets.
 
-**Production URL:** [https://ai-chef-landing.marina-sirenko1-80f.workers.dev](https://ai-chef-landing.marina-sirenko1-80f.workers.dev)
+### Production URL
+
+[View deployed site](https://ai-chef-landing.marina-sirenko1-80f.workers.dev)
+
+### Deploy command
 
 ```bash
 npm run deploy
 ```
 
-Local Cloudflare preview:
+### Local Cloudflare preview
 
 ```bash
 npm run dev:cf
@@ -146,13 +150,15 @@ npm run dev:cf
 
 ### Performance audit
 
-After local preview or deployment, run a real browser-based audit:
+After deployment, run:
 
 ```txt
-/user-run-web-perf-audit https://ai-chef-landing.marina-sirenko1-80f.workers.dev
+user-run-web-perf-audit https://ai-chef-landing.marina-sirenko1-80f.workers.dev
 ```
 
-The command uses Chrome DevTools MCP or Cloudflare `/web-perf`. Header checks alone do not count as a performance audit.
+### Routing
+
+SPA fallback is not enabled. This is expected for simple static landing pages or projects without a client-side router.
 
 ## AI-assisted workflow
 

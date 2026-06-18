@@ -2,7 +2,7 @@
   background: var(--color-light);
   position: relative;
   margin-bottom: 180px;
-  padding-bottom: 0
+  padding-bottom: 0;
 }
 
 .process::after {
@@ -172,43 +172,158 @@
   z-index: 3;
 }
 
+/* Laptop — MacBook Air 13" (1440/1470) */
+@media (max-width: 1536px) { }
+
+/* Tablet — iPad / iPad Air portrait (810–834), iPad Pro 12.9" (1024) */
 @media (max-width: 1024px) {
-  .process__layout {
-    grid-template-columns: 1fr;
-    gap: 48px;
+  .process {
+    border-radius: 32px;
+    overflow: hidden;
+    margin-bottom: 0;
   }
 
-  .process__gallery {
-    min-height: 560px;
-  }
-
-  .process__gallery {
-    max-width: 568px;
-    margin-inline: auto;
-  }
-
-  .process__picture {
-    width: min(568px, 100%);
-    height: auto;
-    aspect-ratio: 568 / 682;
-  }
-}
-
-@media (max-width: 640px) {
-  .process__picture {
+  .process::after {
     display: none;
-    left: 0;
-    transform: none;
+  }
+
+  .process__container {
+    padding-bottom: 80px;
+  }
+
+  .process__layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .process__content {
+    display: contents;
+  }
+
+  .process__list {
+    order: 1;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .process__list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .process__item:not(.is-active),
+  .process__item.is-active {
+    display: block;
+  }
+
+  .process__item {
+    flex: 0 0 100%;
+    min-width: 100%;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+
+  .process .process-card {
+    gap: 16px;
+    margin-top: 60px;
+    margin-bottom: 10px;
+  }
+
+  .process__gallery {
+    order: 2;
+    min-height: auto;
     width: 100%;
+  }
+
+  .process__picture {
+    position: relative;
+    display: none;
+    inset: auto;
+    left: auto;
+    top: auto;
+    width: 100%;
+    height: auto;
+    max-height: 360px;
+    aspect-ratio: 568 / 682;
+    transform: none;
+    border-radius: 28px;
+  }
+
+  .process__picture::after {
+    display: none;
   }
 
   .process__gallery[data-process-step='1'] .process__picture--front,
   .process__gallery[data-process-step='2'] .process__picture--mid,
   .process__gallery[data-process-step='3'] .process__picture--back {
     display: block;
+    z-index: 1;
   }
 
-  .process__gallery {
-    min-height: 400px;
+  .process__footer {
+    order: 3;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 12px;
+  }
+
+  .process__controls {
+    gap: 10px;
+  }
+
+  .process__control {
+    width: 72px;
+    min-width: 72px;
+    height: 48px;
+    min-height: 48px;
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    padding: 0;
+  }
+
+  .process__control:hover,
+  .process__control:focus-visible {
+    background: transparent;
+    border: none;
+  }
+
+  .process__counter {
+    position: static;
+    font-size: 28px;
+  }
+}
+
+/* Tablet mini — iPad mini portrait (744–768) */
+@media (max-width: 768px) {
+  .process {
+    margin-bottom: 120px;
+  }
+}
+
+/* Mobile (375–440) */
+@media (max-width: 480px) {
+  .process__layout {
+    gap: 20px;
+  }
+
+  .process .process-card {
+    gap: 12px;
+  }
+
+  .process__control {
+    width: 56px;
+    min-width: 56px;
+    height: 42px;
+    min-height: 42px;
+  }
+
+  .process__counter {
+    font-size: 22px;
   }
 }
