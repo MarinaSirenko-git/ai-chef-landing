@@ -21,7 +21,7 @@
 }
 
 .site-header__logo-image {
-  width: 74px;
+  width: clamp(30px, 35px + 1.25vw, 74px);
   height: auto;
 }
 
@@ -34,14 +34,14 @@
 .site-header__nav-list {
   display: flex;
   align-items: center;
-  gap: 80px;
+  gap: clamp(40px, 4.46vw - 5.71px, 80px);
 }
 
 .site-header__nav-link {
   font-family: var(--font-main);
-  font-size: var(--text-nav-size, 22px);
-  line-height: var(--text-nav-line-height, 28px);
-  font-weight: var(--text-nav-weight, 400);
+  font-size: clamp(17px, 15.33px + 0.35vw, 22px);
+  line-height: 1.27;
+  font-weight: 400;
   text-decoration: none;
   transition: opacity var(--transition-base, 200ms ease);
   text-wrap: nowrap;
@@ -60,8 +60,8 @@
 
 .site-header__login {
   font-family: var(--font-main);
-  font-size: var(--text-nav-size, 22px);
-  line-height: var(--text-nav-line-height, 28px);
+  font-size: clamp(17px, 15.33px + 0.35vw, 22px);
+  line-height: 1.27;
   text-decoration: none;
   transition: opacity var(--transition-base, 200ms ease);
 }
@@ -71,7 +71,6 @@
 }
 
 .site-header__cta {
-  min-height: 64px;
   background-color: var(--color-green);
   color: white;
 }
@@ -94,7 +93,19 @@
     0 8px 0 var(--color-text, #213d34);
 }
 
+/* Laptop — MacBook Air 13" (1440/1470) + ноутбуки */
+@media (max-width: 1536px) {
+  .site-header {
+    padding: 30px 0;
+  }
+ }
+
+/* Tablet — iPad / iPad Air portrait (810–834), iPad Pro 12.9" (1024) */
 @media (max-width: 1024px) {
+  .site-header__container {
+    grid-template-columns: 1fr 1fr;
+  }
+
   .site-header__nav,
   .site-header__actions {
     display: none;
@@ -102,11 +113,13 @@
 
   .site-header__burger {
     display: inline-flex;
+    margin-left: auto;
   }
 }
 
-@media (max-width: 640px) {
-  .site-header {
-    padding-block: var(--space-16, 16px);
-  }
-}
+/* Tablet mini — iPad mini portrait (744–768) */
+@media (max-width: 768px) { }
+
+/* Mobile — смартфоны (375–440) */
+@media (max-width: 480px) { }
+

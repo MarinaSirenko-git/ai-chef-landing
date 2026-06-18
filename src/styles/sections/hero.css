@@ -34,7 +34,7 @@
 .hero__title {
   text-align: center;
   max-width: 868px;
-  font-size: 61px;
+  font-size: clamp(28px, 25px + 1.875vw, 61px);
   line-height: 1.2;
 }
 
@@ -48,12 +48,16 @@
 
 .hero__gallery {
   display: grid;
-  grid-template-columns: 275px 390px 290px;
+  grid-template-columns: 275fr 390fr 290fr;
   grid-template-rows: 1fr;
-  gap: 30px;
-  height: 530px;
+  gap: clamp(16px, 6.67px + 1.22vw, 30px);
+  height: clamp(320px, 250px + 14.58vw, 530px);
   margin-top: -20px;
+  max-width: 1015px;
 }
+
+.hero__gallery > * { min-width: 0; }
+.hero__gallery img { width: 100%; height: 100%; object-fit: cover; }
 
 .hero__gallery-item--image-start {
   position: relative;
@@ -153,24 +157,82 @@
   height: 491px;
 }
 
-@media (max-width: 1024px) {
-  .hero__gallery {
-    max-width: 480px;
-    margin-inline: auto;
-  }
-}
-
-@media (max-width: 640px) {
-  .hero__gallery {
-    grid-template-columns: 1fr;
+/* Laptop — MacBook Air 13" (1440/1470) */
+@media (max-width: 1536px) {
+  .hero {
+    padding: 40px 0 100px;
   }
 
-  .hero__image--secondary {
-    margin-top: 0;
-  }
-
-  .hero__content::before,
-  .hero__content::after {
+  .hero__gallery-item--image-start::before {
     display: none;
   }
+
+  .hero__gallery-item--stat-end::after {
+    display: none;
+  }
+
 }
+
+/* Tablet — iPad / iPad Air portrait (810–834), iPad Pro 12.9" (1024) */
+@media (max-width: 1024px) {
+  .hero__gallery-item--image-start::after {
+    display: none;
+  }
+
+  .hero__gallery-item--stat-end::before {
+    display: none;
+  }
+
+  .hero__title {
+    max-width: 550px;
+  }
+}
+
+/* Tablet mini — iPad mini portrait (744–768) */
+@media (max-width: 768px) { 
+  .hero__gallery { 
+    grid-template-columns: 1fr 1fr; 
+    margin-top: 50px;
+  }
+  .hero__gallery > :nth-child(1) { 
+    display: none; 
+  }
+  .hero__gallery-item--actions {
+    order: 2;
+  }
+  .hero__gallery-item--stat-end {
+    order: 1;
+  }
+  .hero__button {
+    width: 100%;
+  }
+}
+
+/* Mobile (375–440) */
+@media (max-width: 480px) {
+  .hero {
+    padding: 0px 0 50px;
+  }
+  .hero__content {
+    gap: 30px;
+  }
+  .hero__gallery { 
+    grid-template-columns: 1fr; 
+    margin-top: 50px;
+    height: auto;
+    gap: 40px;
+  }
+  .hero__gallery-item--actions {
+    order: 1;
+  }
+  .hero__gallery-item--stat-end {
+    order: 2;
+  }
+  .hero-stat-card--highlight {
+    order: 1;
+  }
+  .hero__actions {
+    order: 2;
+    margin-top: -40px;
+  }
+ }
