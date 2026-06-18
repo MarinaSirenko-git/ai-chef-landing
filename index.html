@@ -142,21 +142,25 @@
           </div>
 
           <div class="demo__layout">
-            <figure class="demo__media">
+            <figure
+              class="demo__media"
+              data-demo-video
+              data-video-src="/src/assets/cooking.mp4"
+            >
               <picture class="demo__picture">
                 <source srcset="/src/assets/images/demo-video-basil.webp" type="image/webp" />
 
                 <img
                   class="demo__image"
                   src="/src/assets/images/demo-video-basil.jpg"
-                  alt="Fresh basil leaves in demo video capsule"
+                  alt="Fresh basil leaves in demo video preview"
                   width="1045"
                   height="610"
                   decoding="async"
                   loading="lazy"
                 />
               </picture>
-              <button class="demo__play button" type="button" aria-label="Play demo video">
+              <button class="demo__play button js-demo-play" type="button" aria-label="Play demo video">
                 <img
                   class="demo__play-icon"
                   src="/src/assets/icons/icon-play.svg"
@@ -167,11 +171,35 @@
                   decoding="async"
                 />
               </button>
+              <div class="demo__player">
+                <video
+                  class="demo__image demo__video"
+                  preload="none"
+                  playsinline
+                  aria-label="Demo cooking video"
+                ></video>
+                <div class="demo__controls" aria-label="Video controls">
+                  <button class="demo__control-button js-demo-toggle" type="button" aria-label="Pause video">
+                    <span class="demo__control-icon demo__control-icon--play" aria-hidden="true">▶</span>
+                    <span class="demo__control-icon demo__control-icon--pause" aria-hidden="true">❚❚</span>
+                  </button>
+                  <input
+                    class="demo__progress js-demo-progress"
+                    type="range"
+                    min="0"
+                    max="1000"
+                    step="1"
+                    value="0"
+                    aria-label="Video progress"
+                  />
+                  <span class="demo__time js-demo-time">0:00 / 0:00</span>
+                </div>
+              </div>
             </figure>
 
             <blockquote class="demo__quote">
               <p>
-                Every meal is a chance to nourish your body, inspire your mind, and feed<br />
+                Every meal is a chance to nourish your body, inspire your mind, and feed<br class="demo__quote-br" />
                 your soul.
               </p>
             </blockquote>

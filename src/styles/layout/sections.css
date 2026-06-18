@@ -8,3 +8,28 @@ section {
   gap: 106px;
   margin-bottom: 90px;
 }
+
+
+/* Laptop — MacBook Air 13" (1440/1470) + ноутбуки */
+@media (max-width: 1536px) { }
+
+/* Tablet — iPad / iPad Air portrait (810–834), iPad Pro 12.9" (1024) */
+@media (max-width: 1024px) { }
+
+/* Tablet mini — iPad mini portrait (744–768) */
+@media (max-width: 768px) { }
+
+/* Mobile — смартфоны (375–440) */
+@media (max-width: 480px) { 
+  .section-header {
+    margin-bottom: 60px;
+    gap: 20px;
+    align-items: start;
+  }
+  .section-text {
+    text-align: end;
+  }
+  .section-text::before {
+    display: none;
+  }
+}
