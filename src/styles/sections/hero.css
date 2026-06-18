@@ -34,7 +34,7 @@
 .hero__title {
   text-align: center;
   max-width: 868px;
-  font-size: clamp(28px, 25px + 1.875vw, 61px);
+  font-size: clamp(26px, 22px + 1.875vw, 61px);
   line-height: 1.2;
 }
 
@@ -211,7 +211,7 @@
 /* Mobile (375–440) */
 @media (max-width: 480px) {
   .hero {
-    padding: 0px 0 50px;
+    padding: 30px 0 50px;
   }
   .hero__content {
     gap: 30px;
@@ -230,9 +230,17 @@
   }
   .hero-stat-card--highlight {
     order: 1;
+    display: none
   }
   .hero__actions {
     order: 2;
-    margin-top: -40px;
+    margin-top: -10px;
+  }
+  .hero__button {
+    max-width: 250px;
+  }
+  .hero__gallery-item--stat-end {
+    max-width: 250px;
+    margin: auto;
   }
  }

@@ -30,7 +30,7 @@
 
 .eyebrow {
   font-family: var(--font-main);
-  font-size: clamp(0.875rem, 1.5vw, 26px);
+  font-size: clamp(1rem, 1.5vw, 26px);
   line-height: 1.2;
   font-weight: 400;
 }
