@@ -77,38 +77,84 @@
   height: 490px;
 }
 
-@media (max-width: 1024px) {
-  .benefits__list {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    row-gap: 32px;
+/* Laptop — MacBook Air 13" (1440/1470) + ноутбуки */
+@media (max-width: 1536px) { 
+  .benefits__item:nth-child(-n + 4) > * {
+    width: 100%;
+    height: 390px;
   }
-
-  .benefits__item:nth-child(1),
-  .benefits__item:nth-child(2),
-  .benefits__item:nth-child(3),
-  .benefits__item:nth-child(4),
-  .benefits__item:nth-child(5),
-  .benefits__item:nth-child(6),
-  .benefits__item:nth-child(7),
-  .benefits__item:nth-child(8) {
-    grid-column: auto;
-    grid-row: auto;
-    margin-top: 0;
-    padding-top: 0;
+  .benefit-card--photo {
+    padding: 0;
+  }
+  .benefits__item:nth-child(7) .benefit-card--inverted {
+    text-align: left;
+    height: 390px;
     align-self: start;
   }
-
-  .benefits__item:nth-child(2),
-  .benefits__item:nth-child(4),
-  .benefits__item:nth-child(6),
-  .benefits__item:nth-child(8) {
-    margin-top: 0;
+  .benefits__item:nth-child(7) {
+    margin-top: -50px;
   }
 }
 
-@media (max-width: 640px) {
+/* Tablet — iPad / iPad Air portrait (810–834), iPad Pro 12.9" (1024) */
+@media (max-width: 1024px) { }
+
+/* Tablet mini — iPad mini portrait (744–768) */
+@media (max-width: 768px) {
+  .benefits__list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .benefits__item:nth-child(n) {
+    grid-column: auto;
+    grid-row: auto;
+    margin-top: 0;
+    z-index: auto;
+  }
+
+  .benefits__item:nth-child(-n + 4) > * {
+    height: 350px;
+  }
+
+  .benefits__item--photo {
+    display: none;
+  }
+
+  .benefits__item:nth-child(7) {
+    order: 5;
+  }
+
+  .benefits__item:nth-child(6) {
+    order: 6;
+  }
+
+  .benefits__item:nth-child(7) .benefit-card--inverted {
+    margin-top: -60px;
+  }
+}
+
+/* Mobile — смартфоны (375–440) */
+@media (max-width: 480px) {
   .benefits__list {
     grid-template-columns: 1fr;
-    row-gap: 24px;
+    row-gap: 0px;
   }
+
+  .benefits__item:nth-child(n) {
+    grid-column: auto;
+    grid-row: auto;
+    margin-top: 0;
+    z-index: auto;
+  }
+
+  .benefits__item:nth-child(-n + 4) > * {
+    height: auto;
+  }
+
+  .benefits__item:nth-child(7) .benefit-card--inverted {
+    margin-top: 0px;
+    height: auto
+  }
+
+
 }

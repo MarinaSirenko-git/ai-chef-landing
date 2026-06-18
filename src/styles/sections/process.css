@@ -308,6 +308,10 @@
 
 /* Mobile (375–440) */
 @media (max-width: 480px) {
+  .process {
+    margin-bottom: 0;
+  }
+
   .process__layout {
     gap: 20px;
   }

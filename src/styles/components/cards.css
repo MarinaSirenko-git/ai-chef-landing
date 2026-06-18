@@ -67,10 +67,6 @@
   text-align: start;
 }
 
-.benefit-card__title {
-  font-size: 34px;
-}
-
 .benefit-card--plain {
   background: transparent;
   border: none;
@@ -367,17 +363,25 @@
   .hero-stat-card--highlight {
     padding: 40px 0;
   }
+  .benefit-card {
+    padding: 10px 15px;
+  }
 }
 
 /* Tablet — iPad / iPad Air (landscape 1180, portrait 820) */
 @media (max-width: 1024px) { }
 
-/* Tablet mini — iPad mini и узкие планшеты (744–810) */
+/* Tablet mini — iPad mini (744–810) */
 @media (max-width: 768px) { 
   .hero-stat-card__value {
     text-align: center;
   }
+  
 }
 
 /* Mobile — смартфоны (375–440) */
-@media (max-width: 480px) { }
+@media (max-width: 480px) {
+  .benefit-card {
+    padding: 40px 50px;
+  }
+ }
