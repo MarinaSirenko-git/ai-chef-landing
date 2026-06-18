@@ -104,30 +104,24 @@
   .benefits__list {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
-
   .benefits__item:nth-child(n) {
     grid-column: auto;
     grid-row: auto;
     margin-top: 0;
     z-index: auto;
   }
-
   .benefits__item:nth-child(-n + 4) > * {
     height: 350px;
   }
-
   .benefits__item--photo {
     display: none;
   }
-
   .benefits__item:nth-child(7) {
     order: 5;
   }
-
   .benefits__item:nth-child(6) {
     order: 6;
   }
-
   .benefits__item:nth-child(7) .benefit-card--inverted {
     margin-top: -60px;
   }
@@ -139,22 +133,17 @@
     grid-template-columns: 1fr;
     row-gap: 0px;
   }
-
   .benefits__item:nth-child(n) {
     grid-column: auto;
     grid-row: auto;
     margin-top: 0;
     z-index: auto;
   }
-
   .benefits__item:nth-child(-n + 4) > * {
     height: auto;
   }
-
   .benefits__item:nth-child(7) .benefit-card--inverted {
     margin-top: 0px;
     height: auto
   }
-
-
 }

@@ -87,17 +87,21 @@
   align-items: center;
   max-width: 190px;
   font-family: var(--font-main);
-  font-size: 22px;
+  font-size: clamp(17px, 15.33px + 0.35vw, 22px);
   line-height: 1.2;
   color: var(--color-green);
   text-decoration: none;
 }
 
 .recipes-preview__explore span[aria-hidden='true'] {
-  font-size: 22px;
+  font-size: clamp(17px, 15.33px + 0.35vw, 22px);
   line-height: 1;
 }
 
+/* Laptop — MacBook Air 13" (1440/1470) + ноутбуки */
+@media (max-width: 1536px) { }
+
+/* Tablet — iPad / iPad Air portrait (810–834), iPad Pro 12.9" (1024) */
 @media (max-width: 1024px) {
   .recipes-preview__list {
     grid-template-columns: 1fr;
@@ -122,8 +126,12 @@
   }
 }
 
-@media (max-width: 640px) {
-  .recipe-card {
-    border-radius: 34px;
+/* Tablet mini — iPad mini portrait (744–768) */
+@media (max-width: 768px) { }
+
+/* Mobile — (375–440) */
+@media (max-width: 480px) { 
+  .recipes-preview__list {
+    gap: 20px;
   }
 }
