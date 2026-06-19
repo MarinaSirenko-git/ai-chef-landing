@@ -21,7 +21,7 @@
   gap: 38px;
   cursor: pointer;
   font-family: var(--font-main);
-  font-size: 22px;
+  font-size: clamp(17px, 15.33px + 0.35vw, 22px);
   line-height: 1.2;
   font-weight: 500;
   list-style: none;
@@ -72,12 +72,50 @@
   padding-top: 16px;
   padding-left: 100px;
   font-family: var(--font-main);
-  font-size: 22px;
+  font-size: clamp(16px, 15px + 0.35vw, 22px);
   line-height: 1.2;
 }
 
-@media (max-width: 768px) {
+/* Laptop — MacBook Air 13" (1440/1470) + ноутбуки */
+@media (max-width: 1536px) {
+  .faq-item {
+    padding-inline: 30px;
+  }
+  .faq-item[open] {
+    padding: 30px;
+  }
+ }
+
+/* Tablet — iPad / iPad Air portrait (810–834), iPad Pro 12.9" (1024) */
+@media (max-width: 1024px) { 
   .faq__list {
     grid-template-columns: 1fr;
   }
+  .faq-item {
+    padding-inline: 10px;
+  }
+  .faq-item[open] {
+    padding: 10px 10px 30px 10px;
+  }
+  .faq-item__answer {
+    padding-top: 0;
+  }
+}
+
+/* Tablet mini — iPad mini portrait (744–768) */
+@media (max-width: 768px) { }
+
+/* Mobile — смартфоны (375–440) */
+@media (max-width: 480px) { 
+  .faq-item__question {
+    gap: 15px;
+  }
+  .faq-item__answer {
+    padding-left: 75px;
+  }
+  .faq-item__icon {
+    width: 45px;
+    height: 45px;
+  }
+
 }
