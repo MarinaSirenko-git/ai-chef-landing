@@ -209,7 +209,8 @@
 .recipe-card--highlight > :nth-child(1) {
   grid-column: 1;
   grid-row: 1 / span 2;
-  align-self: stretch;
+  align-self: center;
+  justify-self: center;
 }
 
 .recipe-card--highlight > :nth-child(2) {
@@ -364,16 +365,18 @@
 
 /* Laptop — MacBook Air 13" (1440 / 1470) + ноутбуки 13–15" */
 @media (max-width: 1536px) { 
-  .hero-stat-card--highlight {
-    padding: 40px 0;
-  }
-  .benefit-card {
-    padding: 10px 15px;
-  }
+
 }
 
 /* Tablet — iPad / iPad Air (landscape 1180, portrait 820) */
-@media (max-width: 1024px) { }
+@media (max-width: 1024px) {
+  .benefit-card {
+    padding: 10px 15px;
+  }
+  .hero-stat-card--highlight {
+    padding: 40px 0;
+  }
+ }
 
 /* Tablet mini — iPad mini (744–810) */
 @media (max-width: 768px) { 
@@ -388,11 +391,19 @@
   .benefit-card {
     padding: 40px 50px;
   }
+  .recipe-card,
+  .recipe-card--highlight {
+    height: 200px;
+    border-radius: 34px;
+  }
   .recipe-card--outline, .recipe-card--surface {
-    grid-template-columns: minmax(0, 1fr) 160px;
+    grid-template-columns: minmax(0, 1fr) 100px;
   }
   .recipe-card--highlight {
-    grid-template-columns: 160px minmax(0, 1fr);
+    grid-template-columns: 100px minmax(0, 1fr);
+  }
+  .recipe-card .recipe-card__image {
+    object-fit: contain;
   }
   .testimonial-card__quote-icon {
     width: 20px;
