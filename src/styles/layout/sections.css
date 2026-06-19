@@ -22,12 +22,13 @@ section {
 /* Mobile — смартфоны (375–440) */
 @media (max-width: 480px) { 
   .section-header {
-    margin-bottom: 60px;
+    margin-bottom: 40px;
     gap: 20px;
     align-items: start;
+    flex-direction: column;
   }
   .section-text {
-    text-align: end;
+    text-align: start;
   }
   .section-text::before {
     display: none;

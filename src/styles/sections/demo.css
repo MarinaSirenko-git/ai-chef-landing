@@ -212,7 +212,7 @@
 
 .demo__quote {
   font-family: var(--font-display);
-  font-size: clamp(2rem, 4vw, 55px);
+  font-size: clamp(1.3rem, 4vw, 55px);
   line-height: 1.2;
   font-weight: 500;
   color: var(--color-text);
@@ -243,13 +243,16 @@
     align-self: start;
   }
   .demo__player {
-    border-radius: var(--radius-lg, 43px);
+    border-radius: 43px;
   }
   .demo__picture {
-    border-radius: var(--radius-lg, 43px);
+    border-radius: 43px;
   }
   .demo__controls {
-    width: min(72%, 320px);
+    left: 6px;
+    right: 6px;
+    transform: none;
+    width: auto;
     bottom: 10px;
     gap: 6px;
     padding: 5px 6px;
@@ -266,6 +269,9 @@
 
 /* Mobile — смартфоны (375–440) */
 @media (max-width: 480px) {
+  .demo {
+    padding: 80px 0 80px;
+  }
   .demo__layout {
     padding: 0;
     gap: 40px;
@@ -277,6 +283,11 @@
     display: none;
   }
   .demo__player {
+    border: none;
+    border-radius: 15px;
+  }
+  .demo__picture {
+    border-radius: 15px;
     border: none;
   }
  }

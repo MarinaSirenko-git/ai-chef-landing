@@ -1,3 +1,5 @@
+import cookingVideoSrc from '../assets/cooking.mp4';
+
 export function initDemoVideo() {
   const root = document.querySelector('[data-demo-video]');
   if (!root) return;
@@ -7,9 +9,8 @@ export function initDemoVideo() {
   const progress = root.querySelector('.js-demo-progress');
   const time = root.querySelector('.js-demo-time');
   const video = root.querySelector('.demo__video');
-  const videoSrc = root.dataset.videoSrc;
 
-  if (!startButton || !toggleButton || !progress || !time || !video || !videoSrc) return;
+  if (!startButton || !toggleButton || !progress || !time || !video) return;
 
   const formatTime = (value) => {
     if (!Number.isFinite(value) || value < 0) return '0:00';
@@ -42,14 +43,14 @@ export function initDemoVideo() {
 
   const startPlayback = async () => {
     if (!root.classList.contains('is-playing')) {
-      video.src = videoSrc;
+      video.src = cookingVideoSrc;
       root.classList.add('is-playing');
     }
 
     try {
       await video.play();
-    } catch {
-      // Browser autoplay policies may block programmatic play.
+    } catch (error) {
+      console.error('Demo video play() failed:', error);
     }
     updateToggleState();
   };
@@ -62,8 +63,8 @@ export function initDemoVideo() {
     if (video.paused) {
       try {
         await video.play();
-      } catch {
-        // Browser autoplay policies may block programmatic play.
+      } catch (error) {
+        console.error('Demo video play() failed:', error);
       }
     } else {
       video.pause();
