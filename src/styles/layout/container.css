@@ -2,4 +2,5 @@
   max-width: 1640px;
   width: calc(100% - clamp(30px, 17.59px + 2.59vw, 60px));
   margin-inline: auto;
+  overflow: hidden;
 }

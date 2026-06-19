@@ -1,5 +1,5 @@
 .cta-support__container {
-  width: min(100% - 140px, 1640px);
+  width: calc(100% - clamp(30px, 17.59px + 2.59vw, 60px));
   margin-inline: auto;
 }
 
@@ -58,19 +58,36 @@
   color: var(--color-text);
 }
 
+/* Laptop — MacBook Air 13" (1440/1470) */
+@media (max-width: 1536px) { }
+
+/* Tablet — iPad / iPad Air portrait (810–834), iPad Pro 12.9" (1024) */
 @media (max-width: 1024px) {
   .cta-support__layout {
     grid-template-columns: 1fr;
-    gap: 48px;
-  }
+    border: none;
+    padding: 0;
+ }
+ .cta-support__image {
+  transform: none;
+  object-fit: contain;
+ }
 }
 
-@media (max-width: 768px) {
-  .cta-support__container {
-    width: min(100% - 48px, 1640px);
-  }
+/* Tablet mini — iPad mini portrait (744–768) */
+@media (max-width: 768px) { }
 
+/* Mobile — (375–440) */
+@media (max-width: 480px) {
+  .cta-support__layout {
+    gap: 30px;
+  }
   .cta-support__media {
-    border-radius: 43px;
+    border: none;
+    padding: 0;
   }
-}
+  .cta-support__button {
+    max-width: 100%;
+  }
+ }
+
