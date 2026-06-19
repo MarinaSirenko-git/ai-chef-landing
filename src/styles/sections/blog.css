@@ -38,8 +38,14 @@
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .blog__list {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) { 
+  .blog {
+    padding-bottom: 80px;
   }
 }
