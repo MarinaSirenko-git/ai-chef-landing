@@ -115,11 +115,25 @@
             <li class="hero__gallery-item hero__gallery-item--stat-end">
               <article class="hero-stat-card">
                 <picture class="hero-stat-card__picture">
-                  <source srcset="/src/assets/images/photo-produce-bag.webp" type="image/webp" />
+                  <source
+                    srcset="
+                      /src/assets/images/photo-produce-bag-220.webp 220w,
+                      /src/assets/images/photo-produce-bag-520.webp 520w,
+                      /src/assets/images/photo-produce-bag.webp 800w
+                    "
+                    sizes="(max-width: 480px) 220px, 260px"
+                    type="image/webp"
+                  />
 
                   <img
                     class="hero-stat-card__image"
                     src="/src/assets/images/photo-produce-bag.jpg"
+                    srcset="
+                      /src/assets/images/photo-produce-bag-220.jpg 220w,
+                      /src/assets/images/photo-produce-bag-520.jpg 520w,
+                      /src/assets/images/photo-produce-bag.jpg 800w
+                    "
+                    sizes="(max-width: 480px) 220px, 260px"
                     alt=""
                     width="260"
                     height="293"
@@ -146,11 +160,25 @@
           <div class="demo__layout">
             <figure class="demo__media" data-demo-video>
               <picture class="demo__picture">
-                <source srcset="/src/assets/images/demo-video-basil.webp" type="image/webp" />
+                <source
+                  srcset="
+                    /src/assets/images/demo-video-basil-382.webp 382w,
+                    /src/assets/images/demo-video-basil-760.webp 760w,
+                    /src/assets/images/demo-video-basil.webp 1600w
+                  "
+                  sizes="(max-width: 768px) 100vw, 68vw"
+                  type="image/webp"
+                />
 
                 <img
                   class="demo__image"
                   src="/src/assets/images/demo-video-basil.jpg"
+                  srcset="
+                    /src/assets/images/demo-video-basil-382.jpg 382w,
+                    /src/assets/images/demo-video-basil-760.jpg 760w,
+                    /src/assets/images/demo-video-basil.jpg 1600w
+                  "
+                  sizes="(max-width: 768px) 100vw, 68vw"
                   alt="Fresh basil leaves in demo video preview"
                   width="1045"
                   height="610"
@@ -539,13 +567,24 @@
                   </figcaption>
                   <picture class="recipes-preview__picture">
                     <source
-                      srcset="/src/assets/images/recipes-featured-spread.webp"
+                      srcset="
+                        /src/assets/images/recipes-featured-spread-382.webp 382w,
+                        /src/assets/images/recipes-featured-spread-760.webp 760w,
+                        /src/assets/images/recipes-featured-spread.webp 1071w
+                      "
+                      sizes="(max-width: 1024px) 100vw, 46vw"
                       type="image/webp"
                     />
     
                     <img
                       class="recipes-preview__featured-image"
                       src="/src/assets/images/recipes-featured-spread.jpg"
+                      srcset="
+                        /src/assets/images/recipes-featured-spread-382.jpg 382w,
+                        /src/assets/images/recipes-featured-spread-760.jpg 760w,
+                        /src/assets/images/recipes-featured-spread.jpg 1071w
+                      "
+                      sizes="(max-width: 1024px) 100vw, 46vw"
                       alt="Large featured recipes food spread"
                       width="778"
                       height="960"
