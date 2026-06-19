@@ -181,6 +181,7 @@
     border-radius: 32px;
     overflow: hidden;
     margin-bottom: 0;
+    background: transparent;
   }
 
   .process::after {
@@ -195,6 +196,10 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 24px;
+    background: var(--color-light);
+    padding: 30px;
+    border-radius: 43px;
+    margin-top: 50px;
   }
 
   .process__content {
@@ -234,38 +239,11 @@
   }
 
   .process__gallery {
-    order: 2;
-    min-height: auto;
-    width: 100%;
-  }
-
-  .process__picture {
-    position: relative;
     display: none;
-    inset: auto;
-    left: auto;
-    top: auto;
-    width: 100%;
-    height: auto;
-    max-height: 360px;
-    aspect-ratio: 568 / 682;
-    transform: none;
-    border-radius: 28px;
-  }
-
-  .process__picture::after {
-    display: none;
-  }
-
-  .process__gallery[data-process-step='1'] .process__picture--front,
-  .process__gallery[data-process-step='2'] .process__picture--mid,
-  .process__gallery[data-process-step='3'] .process__picture--back {
-    display: block;
-    z-index: 1;
   }
 
   .process__footer {
-    order: 3;
+    order: 2;
     justify-content: space-between;
     align-items: center;
     flex-wrap: nowrap;
@@ -285,12 +263,15 @@
     border: none;
     font-size: 30px;
     padding: 0;
+    color: var(--color-text);
   }
 
   .process__control:hover,
-  .process__control:focus-visible {
+  .process__control:focus-visible,
+  .process__control:active {
     background: transparent;
     border: none;
+    color: var(--color-text);
   }
 
   .process__counter {
@@ -311,22 +292,21 @@
   .process {
     margin-bottom: 0;
   }
-
+  .process__container {
+    padding-bottom: 50px;
+  }
   .process__layout {
     gap: 20px;
   }
-
   .process .process-card {
     gap: 12px;
   }
-
   .process__control {
     width: 56px;
     min-width: 56px;
     height: 42px;
     min-height: 42px;
   }
-
   .process__counter {
     font-size: 22px;
   }
