@@ -296,7 +296,7 @@
 .pricing-card {
   display: grid;
   gap: 24px;
-  padding: 70px 50px;
+  padding: clamp(40px, 30px + 2.08vw, 70px) clamp(24px, 19.67px + 0.9vw, 50px);
   background: var(--color-bg);
   border: 2px solid var(--color-border);
   border-radius: 43px;
@@ -309,38 +309,38 @@
 
 .pricing-card__price {
   font-family: var(--font-main);
-  font-size: 22px;
+  font-size: clamp(17px, 15.33px + 0.35vw, 22px);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .pricing-card__amount {
-  font-size: 45px;
+  font-size: clamp(30px, 24.33px + 1.18vw, 45px);
   font-weight: 500;
 }
 
 .pricing-card__features {
   display: grid;
-  gap: 16px;
-  padding-top: 24px;
-  padding-bottom: 60px;
-  padding-left: 12px;
+  gap: clamp(12px, 10.67px + 0.28vw, 16px);
+  padding-top: clamp(16px, 13.33px + 0.56vw, 24px);
+  padding-bottom: clamp(32px, 22.67px + 1.94vw, 60px);
+  padding-left: clamp(8px, 6.67px + 0.28vw, 12px);
   border-bottom: 2px solid var(--color-green);
 }
 
 .pricing-card__feature {
   font-family: var(--font-main);
-  font-size: 22px;
+  font-size: clamp(17px, 15.33px + 0.35vw, 22px);
   line-height: 1.4;
   list-style: disc;
 }
 
 .pricing-card__best-for {
   font-family: var(--font-main);
-  font-size: 22px;
+  font-size: clamp(17px, 15.33px + 0.35vw, 22px);
   line-height: 1.4;
-  padding-top: 35px;
+  padding-top: clamp(20px, 15px + 1.04vw, 35px);
 }
 
 .pricing-card__cta {
@@ -375,6 +375,11 @@
   }
   .hero-stat-card--highlight {
     padding: 40px 0;
+  }
+  .pricing-card {
+    gap: 20px;
+    padding: clamp(40px, 30px + 2.08vw, 70px) clamp(24px, 19.67px + 0.9vw, 50px);
+    border-radius: 34px;
   }
  }
 

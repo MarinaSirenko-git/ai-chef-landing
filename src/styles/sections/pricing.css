@@ -12,7 +12,7 @@
   width: max-content;
   max-width: 100%;
   display: grid;
-  grid-template-columns: 450px 480px 450px;
+  grid-template-columns: 450fr 480fr 450fr;
   gap: 0;
   align-items: center;
 }
@@ -39,7 +39,7 @@
   text-align: center;
 }
 
-.pricing__plans .pricing-card {
+.pricing-card {
   width: 100%;
   height: 881px;
   box-sizing: border-box;
@@ -61,29 +61,40 @@
   height: 981px;
 }
 
-@media (max-width: 1280px) {
+/* Laptop — MacBook Air 13" (1440/1470) */
+@media (max-width: 1536px) { }
+
+/* Tablet — iPad / iPad Air portrait (810–834), iPad Pro 12.9" (1024) */
+@media (max-width: 1024px) {
   .pricing__layout {
-    grid-template-columns: 1fr;
+    padding-bottom: 80px;
   }
-
-  .pricing__side-photo {
-    display: none;
-  }
-
   .pricing__plans {
     grid-template-columns: 1fr;
-    max-width: 480px;
-    margin-inline: auto;
+    gap: 20px;
   }
-
-  .pricing__plans .pricing-card,
+  .pricing-card {
+    height: 640px;
+    max-width: 360px;
+  }
+  .pricing__plans > .pricing__plan:first-child .pricing-card {
+    border-top-right-radius: 34px;
+    border-bottom-right-radius: 34px;
+    margin-right: 0px;
+  }
+  
+  .pricing__plans > .pricing__plan:last-child .pricing-card {
+    border-top-left-radius: 34px;
+    border-bottom-left-radius: 34px;
+    margin-left: 0px;
+  }
   .pricing__plans .pricing-card--featured {
-    height: auto;
+    height: 640px;
   }
-}
+ }
 
-@media (max-width: 640px) {
-  .pricing__plans {
-    max-width: none;
-  }
-}
+/* Tablet mini — iPad mini portrait (744–768) */
+@media (max-width: 768px) { }
+
+/* Mobile — (375–440) */
+@media (max-width: 480px) { }
