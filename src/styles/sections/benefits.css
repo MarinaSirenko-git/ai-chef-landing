@@ -1,5 +1,5 @@
 .benefits {
-  background-color: #fff;
+  background-color: var(--color-bg);
 }
 
 .benefits__text::before {

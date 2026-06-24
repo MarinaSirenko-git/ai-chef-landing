@@ -1,5 +1,5 @@
 .pricing {
-  background-color: #fff;
+  background-color: var(--color-bg);
 }
 
 .pricing__layout {

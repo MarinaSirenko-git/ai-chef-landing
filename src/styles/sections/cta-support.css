@@ -1,5 +1,5 @@
 .cta-support {
-  background-color: #fff;
+  background-color: var(--color-bg);
 }
 
 .cta-support__container {

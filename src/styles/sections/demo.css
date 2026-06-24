@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #fff;
+  background-color: var(--color-bg);
 }
 
 .demo__layout {
@@ -160,7 +160,7 @@
   margin-top: -3px;
   border: none;
   border-radius: 50%;
-  background: #fff;
+  background: var(--color-bg);
 }
 
 .demo__progress::-moz-range-track {
@@ -181,7 +181,7 @@
   height: 10px;
   border: none;
   border-radius: 50%;
-  background: #fff;
+  background: var(--color-bg);
 }
 
 .demo__time {

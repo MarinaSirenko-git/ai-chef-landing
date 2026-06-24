@@ -1,5 +1,5 @@
 .faq {
-  background-color: #fff;
+  background-color: var(--color-bg);
 }
 
 .faq__list {

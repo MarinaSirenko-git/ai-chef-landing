@@ -1,5 +1,5 @@
 .recipes-preview {
-  background-color: #fff;
+  background-color: var(--color-bg);
 }
 
 .recipes-preview__text::before {
@@ -56,7 +56,7 @@
   left: 0;
   z-index: 1;
   overflow: visible;
-  background: white;
+  background: var(--color-bg);
   color: var(--color-green);
   padding: 16px;
   border-bottom-right-radius: 24px;
@@ -69,7 +69,7 @@
   bottom: -24px;
   width: 24px;
   height: 24px;
-  background: radial-gradient(circle at 100% 0, transparent 24px, white 24.5px);
+  background: radial-gradient(circle at 100% 0, transparent 24px, var(--color-bg) 24.5px);
   pointer-events: none;
   transform: rotate(90deg);
 }
@@ -81,7 +81,7 @@
   right: -24px;
   width: 24px;
   height: 24px;
-  background: radial-gradient(circle at 0 100%, transparent 24px, white 24.5px);
+  background: radial-gradient(circle at 0 100%, transparent 24px, var(--color-bg) 24.5px);
   pointer-events: none;
   transform: rotate(-90deg);
 }
