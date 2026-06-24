@@ -15,6 +15,12 @@
   gap: 80px;
 }
 
+.site-footer__logo {
+  display: block;
+  width: clamp(30px, 35px + 1.25vw, 74px);
+  height: auto;
+}
+
 .site-footer__logo-image {
   width: clamp(30px, 35px + 1.25vw, 74px);
   height: auto;

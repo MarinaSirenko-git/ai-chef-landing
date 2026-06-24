@@ -17,6 +17,10 @@
   pointer-events: none;
 }
 
+.process__container {
+  overflow: visible;
+}
+
 .process__header {
   margin-bottom: 0;
 }
