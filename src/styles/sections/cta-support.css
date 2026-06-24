@@ -1,3 +1,7 @@
+.cta-support {
+  background-color: #fff;
+}
+
 .cta-support__container {
   width: calc(100% - clamp(30px, 17.59px + 2.59vw, 60px));
   margin-inline: auto;

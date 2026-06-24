@@ -1,4 +1,4 @@
-import cookingVideoSrc from '../assets/cooking.mp4';
+import cookingVideoSrc from '../assets/video/cooking.mp4';
 
 export function initDemoVideo() {
   const root = document.querySelector('[data-demo-video]');

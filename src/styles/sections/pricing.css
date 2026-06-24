@@ -1,3 +1,7 @@
+.pricing {
+  background-color: #fff;
+}
+
 .pricing__layout {
   display: grid;
   grid-template-columns: minmax(0, 0.6fr) minmax(0, 2fr) minmax(0, 0.6fr);

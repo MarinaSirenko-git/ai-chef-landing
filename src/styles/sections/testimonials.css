@@ -1,3 +1,7 @@
+.testimonials {
+  background-color: #fff;
+}
+
 .testimonials__list {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));

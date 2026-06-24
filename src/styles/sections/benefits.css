@@ -1,3 +1,7 @@
+.benefits {
+  background-color: #fff;
+}
+
 .benefits__text::before {
   top: -5px;
 }

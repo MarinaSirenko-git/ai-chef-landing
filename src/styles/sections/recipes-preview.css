@@ -1,3 +1,7 @@
+.recipes-preview {
+  background-color: #fff;
+}
+
 .recipes-preview__text::before {
   top: -8px;
 }
