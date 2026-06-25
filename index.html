@@ -210,13 +210,27 @@
             </li>
             <li class="hero__gallery-item hero__gallery-item--image-end">
               <picture class="hero__picture">
-                <source srcset="/src/assets/images/photo-greens-bowl.webp" type="image/webp" />
+                <source
+                  srcset="
+                    /src/assets/images/photo-greens-bowl-275.webp 275w,
+                    /src/assets/images/photo-greens-bowl-473.webp 473w,
+                    /src/assets/images/photo-greens-bowl-644.webp 644w
+                  "
+                  sizes="275px"
+                  type="image/webp"
+                />
                 <img
                   class="hero__image hero__image--secondary"
                   src="/src/assets/images/photo-greens-bowl.jpg"
+                  srcset="
+                    /src/assets/images/photo-greens-bowl-275.jpg 275w,
+                    /src/assets/images/photo-greens-bowl-473.jpg 473w,
+                    /src/assets/images/photo-greens-bowl-644.jpg 644w
+                  "
+                  sizes="275px"
                   alt="Bowl of greens and soup"
                   width="275"
-                  height="491"
+                  height="413"
                   decoding="async"
                 />
               </picture>
@@ -243,7 +257,7 @@
                     /src/assets/images/demo-video-basil-760.webp 760w,
                     /src/assets/images/demo-video-basil-1024.webp 1024w
                   "
-                  sizes="(max-width: 768px) 100vw, 1008px"
+                  sizes="(max-width: 480px) 382px, (max-width: 768px) calc(100vw - 60px), 1008px"
                   type="image/webp"
                 />
 
@@ -255,7 +269,7 @@
                     /src/assets/images/demo-video-basil-760.jpg 760w,
                     /src/assets/images/demo-video-basil-1024.jpg 1024w
                   "
-                  sizes="(max-width: 768px) 100vw, 1008px"
+                  sizes="(max-width: 480px) 382px, (max-width: 768px) calc(100vw - 60px), 1008px"
                   alt="Fresh basil leaves in demo video preview"
                   width="1024"
                   height="683"
@@ -690,7 +704,7 @@
                         /src/assets/images/recipes-featured-spread-800.webp 800w,
                         /src/assets/images/recipes-featured-spread-1600.webp 1600w
                       "
-                      sizes="(max-width: 1024px) 100vw, 794px"
+                      sizes="(max-width: 480px) 382px, (max-width: 1024px) calc(100vw - 60px), 794px"
                       type="image/webp"
                     />
 
@@ -703,7 +717,7 @@
                         /src/assets/images/recipes-featured-spread-800.jpg 800w,
                         /src/assets/images/recipes-featured-spread-1600.jpg 1600w
                       "
-                      sizes="(max-width: 1024px) 100vw, 794px"
+                      sizes="(max-width: 480px) 382px, (max-width: 1024px) calc(100vw - 60px), 794px"
                       alt="Large featured recipes food spread"
                       width="800"
                       height="1195"
@@ -981,14 +995,28 @@
             <li class="blog__item">
               <article class="blog-card">
                 <picture class="blog-card__picture">
-                  <source srcset="/src/assets/images/blog-card-salad.webp" type="image/webp" />
+                  <source
+                    srcset="
+                      /src/assets/images/blog-card-salad-322.webp 322w,
+                      /src/assets/images/blog-card-salad-473.webp 473w,
+                      /src/assets/images/blog-card-salad-644.webp 644w
+                    "
+                    sizes="(max-width: 768px) 322px, (max-width: 1024px) 400px, 473px"
+                    type="image/webp"
+                  />
 
                   <img
                     class="blog-card__image"
                     src="/src/assets/images/blog-card-salad.jpg"
+                    srcset="
+                      /src/assets/images/blog-card-salad-322.jpg 322w,
+                      /src/assets/images/blog-card-salad-473.jpg 473w,
+                      /src/assets/images/blog-card-salad-644.jpg 644w
+                    "
+                    sizes="(max-width: 768px) 322px, (max-width: 1024px) 400px, 473px"
                     alt="Blog card salad photo"
                     width="473"
-                    height="473"
+                    height="690"
                     decoding="async"
                     loading="lazy"
                   />
@@ -1010,14 +1038,28 @@
             <li class="blog__item">
               <article class="blog-card">
                 <picture class="blog-card__picture">
-                  <source srcset="/src/assets/images/blog-card-garden.webp" type="image/webp" />
+                  <source
+                    srcset="
+                      /src/assets/images/blog-card-garden-322.webp 322w,
+                      /src/assets/images/blog-card-garden-473.webp 473w,
+                      /src/assets/images/blog-card-garden-644.webp 644w
+                    "
+                    sizes="(max-width: 768px) 322px, (max-width: 1024px) 400px, 473px"
+                    type="image/webp"
+                  />
 
                   <img
                     class="blog-card__image"
                     src="/src/assets/images/blog-card-garden.jpg"
+                    srcset="
+                      /src/assets/images/blog-card-garden-322.jpg 322w,
+                      /src/assets/images/blog-card-garden-473.jpg 473w,
+                      /src/assets/images/blog-card-garden-644.jpg 644w
+                    "
+                    sizes="(max-width: 768px) 322px, (max-width: 1024px) 400px, 473px"
                     alt="Blog card garden photo"
                     width="473"
-                    height="473"
+                    height="710"
                     decoding="async"
                     loading="lazy"
                   />
@@ -1039,14 +1081,28 @@
             <li class="blog__item">
               <article class="blog-card">
                 <picture class="blog-card__picture">
-                  <source srcset="/src/assets/images/photo-greens-bowl.webp" type="image/webp" />
+                  <source
+                    srcset="
+                      /src/assets/images/photo-greens-bowl-322.webp 322w,
+                      /src/assets/images/photo-greens-bowl-473.webp 473w,
+                      /src/assets/images/photo-greens-bowl-644.webp 644w
+                    "
+                    sizes="(max-width: 768px) 322px, (max-width: 1024px) 400px, 473px"
+                    type="image/webp"
+                  />
 
                   <img
                     class="blog-card__image"
                     src="/src/assets/images/photo-greens-bowl.jpg"
+                    srcset="
+                      /src/assets/images/photo-greens-bowl-322.jpg 322w,
+                      /src/assets/images/photo-greens-bowl-473.jpg 473w,
+                      /src/assets/images/photo-greens-bowl-644.jpg 644w
+                    "
+                    sizes="(max-width: 768px) 322px, (max-width: 1024px) 400px, 473px"
                     alt="Bowl of greens and soup"
                     width="473"
-                    height="473"
+                    height="710"
                     decoding="async"
                     loading="lazy"
                   />
