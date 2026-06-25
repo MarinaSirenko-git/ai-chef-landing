@@ -117,7 +117,7 @@
   gap: 40px;
  }
  .site-footer__nav-list {
-  grid-template-columns: repeat(2, max-content);
+  grid-template-columns: repeat(1, max-content);
   gap: 40px
  }
  .site-footer__social-icon {
