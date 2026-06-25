@@ -1,172 +1,286 @@
-# AI Chef Landing
+**[EN](#en)**  ·  **[RU](#ru)**
 
-Marketing landing page for **AIChefMate** — a test case for an AI-assisted frontend production workflow in Cursor.
+---
 
-**Live demo:** [https://ai-chef-landing.marina-sirenko1-80f.workers.dev/](https://ai-chef-landing.marina-sirenko1-80f.workers.dev/)
 
-## Why this project exists
 
-This repository is not just a landing page. It is the first real output of an experiment:
+# AIChefMate — Responsive Landing Page
 
-> Can I speed up landing page production with Cursor without losing control over code quality?
+> **Front-end portfolio case study.** Engineering a desktop-only Figma design into a layout that holds up flawlessly across every screen — from a 360px phone to a 34" ultrawide — with fluid scaling, hand-tuned per-section reflow, and a near-perfect Lighthouse profile.
 
-The goal behind the experiment is practical. I am improving frontend skills for my next professional step and preparing to take on routine landing-page work (for example via Upwork) while keeping costs under control. Courses, subscriptions, tokens, and plugins add up — so the workflow itself had to become more efficient.
+**Stack:** HTML · CSS · JavaScript · GSAP · Vite · Cloudflare Workers Static Assets  
+**Lighthouse:** Performance 98 · Accessibility 100 · Best Practices 100 · SEO 100
 
-The approach was deliberately **not** “AI, build a website for me.” Instead, the work was split into repeatable steps, and Cursor helped move through routine tasks faster while the developer kept ownership of architecture, semantics, accessibility, performance, and final polish.
+🔗 **Live demo:** [https://ai-chef-landing.marina-sirenko1-80f.workers.dev](https://ai-chef-landing.marina-sirenko1-80f.workers.dev)  
+🎨 **Design:** [AIChefMate template by Olga Averchenko](https://olgaaverchenko.gumroad.com/l/aichefmate) · front-end implementation by me
 
-A community Figma template (AI Chef / meal-planning theme) was chosen as the source design because it is representative of real client work: multiple sections, typography, imagery, cards, pricing, FAQ, and marketing copy — complex enough to stress-test the pipeline, but still a single static page.
+---
 
-## What this project is for
+## Context
 
-This repo documents and demonstrates:
+The design came as a single, maximum-size desktop mockup. The responsive layer — how it behaves on laptops, tablets, and phones — was entirely undefined, which is exactly where the engineering happens. I owned every adaptation decision: breakpoints, reflow order, what scales, what hides, how shapes transform.
 
-- A **command-driven Cursor workflow** for landing pages (see [AGENT.md](./AGENT.md))
-- A **Figma → code pipeline** that treats design as data, not as copy-paste HTML
-- **Safe Git and deploy automation** with engineering hygiene built in
-- A **production deploy** on Cloudflare Workers Static Assets with a real performance audit
+## The challenge
 
-It is a learning and portfolio artifact first. The next step is to see how the same approach scales to more complex applications.
+A mockup drawn for one wide screen encodes proportions and hierarchy, not absolute heights to reproduce pixel-for-pixel. Translated literally it overflows on a laptop and breaks on a phone. The real work was turning that fixed canvas into a system that scales by content and ratio while keeping the design's character intact — and doing it without per-device hacks or anything breaking between breakpoints.
 
-## Why there is no mobile or tablet layout
+## What I built
 
-The Figma source contains a **single desktop artboard** (Landing frame, ~1440px). There are no mobile or tablet frames in the design file, and responsive layouts were **intentionally out of scope** for this experiment.
+- **Full responsive system, 360 → 1920+.** Pure CSS, desktop-first, with a breakpoint matrix (1536 / 1024 / 768 / 480) mapped to real devices rather than arbitrary numbers.
+- **Fluid scaling with `clamp()` instead of hard steps.** Typography, spacing, and components scale proportionally between anchor widths — the layout reads consistently at any size and never needs a "zoom to fit" workaround.
+- **Per-section reflow strategies** where naive stacking would break the design:
+  - Hero gallery: 3 → 2 → 1 columns, hiding side images progressively rather than squashing them.
+  - Benefits bento grid: vertical capsules soften into readable cards on mobile while keeping the colour rhythm.
+  - Pricing: 3 → 1 stack with the featured plan's emphasis preserved after it loses its raised position.
+  - Step slider: swipe and buttons working together via scroll-snap.
+  - Footer: multi-column desktop layout reflowing into a clean single-column stack.
+- **Native video with custom mini-controls** in place of a YouTube embed — the pill-shaped frame clipped native controls, so the controls were rebuilt inside the capsule's safe zone, free of third-party branding.
+- **GSAP animation** on the hero, process slider, and FAQ accordion for a more alive first impression.
+- **Performance & delivery:** responsive WebP images, self-hosted fonts, long-cache headers, SEO essentials, deployed on Cloudflare Workers Static Assets.
 
-Reasons:
+## Engineering approach
 
-1. **Scope control** — the goal was to validate the full pipeline (audit → tokens → assets → HTML → CSS → a11y → SEO → deploy → perf) on one viewport, not to deliver a production-ready multi-breakpoint site.
-2. **Honest workflow testing** — many real projects start from desktop-only Figma files; the commands had to handle that case safely instead of pretending breakpoints exist.
-3. **Manual polish budget** — after the automated pass, time went into matching the desktop design more closely, not into designing and testing separate layouts.
+The design specified one screen size; every responsive decision was mine to make and justify — adaptation treated as a design problem, not a mechanical resize.
 
-The base CSS layer includes minimal breakpoint hooks left over from scaffolding, but **mobile and tablet views were not designed, implemented, tested, or manually refined**. Treat the live site as a desktop-first demo.
+Verified on physical hardware and an emulated device matrix:
+
+- **Physical:** MacBook Air 13", Samsung Galaxy S21, Xiaomi 34" ultrawide monitor.
+- **Emulated:** iPad Air, iPad Mini, iPad Pro 11"/13", iPhone 17 Pro Max, iPhone SE, generic laptops, plus a custom Samsung S21 profile.
+
+AI-assisted automation (Cursor commands + MCP) handled repetitive markup, keeping focus on layout and UX decisions. See [AGENT.md](./AGENT.md) for the workflow details.
+
+
 
 ## Results
 
-### Workflow acceleration
 
-After one full pass through the command pipeline, the repeatable flow looked like this:
+| Metric         | Score |
+| -------------- | ----- |
+| Performance    | 98    |
+| Accessibility  | 100   |
+| Best Practices | 100   |
+| SEO            | 100   |
 
-```txt
-Figma
-→ audit
-→ tokens
-→ assets
-→ section map
-→ semantic HTML
-→ BEM review
-→ base CSS
-→ accessibility
-→ SEO
-→ assets review
-→ fixes
-→ deploy
-→ performance audit
-→ manual desktop polish
-```
 
-Each Cursor command acts as a small **working contract** (what it may do, what it must not do, which files it reads/writes, when to stop). That made the process far more predictable than open-ended prompts.
+Renders correctly across the full device matrix above, on a structured, maintainable codebase.
 
-Approximate cost for the full experiment on a basic Cursor subscription (Composer 2.5): usage went from **18% to 35%** of the monthly limit. The Figma design cost **€2** in Figma Community; Figma MCP required a paid Figma plan.
+## Tech stack
 
-### Performance
 
-The site was deployed to Cloudflare Workers Static Assets and audited with Chrome DevTools MCP (via the `user-run-web-perf-audit` command — not curl/headers).
+| Area             | Tools                                                               |
+| ---------------- | ------------------------------------------------------------------- |
+| Markup & styling | HTML, CSS (pure, desktop-first, `clamp()`-based fluid scaling, BEM) |
+| Behaviour        | Vanilla JavaScript                                                  |
+| Animation        | GSAP                                                                |
+| Build            | Vite                                                                |
+| Hosting          | Cloudflare Workers Static Assets (Wrangler)                         |
 
-| Metric | Before fixes | After fixes | Good threshold |
-|--------|-------------|-------------|----------------|
-| **LCP** | 655 ms | **459 ms** | < 2.5 s |
-| **CLS** | 0.02 | **0.00** | < 0.1 |
-| **TTFB** | 334 ms | — | < 800 ms |
-
-Fixes applied after the first audit: removed unused GSAP, self-hosted Syne and Work Sans fonts (dropped Google Fonts), added long-cache headers for hashed assets, wired WebP + fallback images through `<picture>`, and optimized heavy raster exports.
-
-Lighthouse accessibility scored **100/100** on the deployed URL.
-
-## Stack
-
-- HTML / CSS / JavaScript (vanilla, no framework)
-- Vite — dev server and production build
-- Plain CSS — BEM, layered architecture, CSS custom properties
-- Cloudflare Workers Static Assets — production hosting
-
-## Project structure
-
-```txt
-src/
-  assets/          # images, icons, fonts, logos
-  scripts/         # main.js, process-slider.js
-  styles/
-    base/          # reset, variables, typography, fonts
-    layout/        # container, sections
-    components/    # buttons, cards
-    sections/      # one file per landing section
-    utilities/     # accessibility, images, animations
-index.html
-public/            # _headers (cache rules)
-wrangler.jsonc     # Cloudflare Workers config
-```
 
 ## Getting started
 
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) 20+ (LTS recommended)
+- npm (comes with Node.js)
+
+### Install & run locally
+
 ```bash
+# clone the repo, then:
 npm install
 npm run dev
 ```
 
-Open the URL shown in the terminal (typically `http://localhost:5173`).
+Open the URL shown in the terminal — usually `http://localhost:5173`.
 
-### Build
+### Available scripts
 
-```bash
-npm run build
-```
 
-Output is written to `dist/`.
+| Command                | Description                                                 |
+| ---------------------- | ----------------------------------------------------------- |
+| `npm run dev`          | Vite dev server with hot reload                             |
+| `npm run build`        | Production build → `dist/`                                  |
+| `npm run preview`      | Preview the production build locally                        |
+| `npm run dev:cf`       | Local preview via Wrangler (Cloudflare Workers environment) |
+| `npm run deploy`       | Build and deploy to Cloudflare Workers                      |
+| `npm run format`       | Format project files with Prettier                          |
+| `npm run format:check` | Check formatting without writing                            |
 
-### Preview production build
 
-```bash
-npm run preview
+### Project structure
+
+```txt
+src/
+  assets/          # images, icons, fonts, video
+  scripts/         # main.js, sliders, accordion, demo video
+  styles/
+    base/          # reset, variables, typography, fonts
+    layout/        # container, sections
+    components/    # buttons, cards
+    sections/      # one CSS file per landing section
+    utilities/     # accessibility, images, animations
+index.html
+public/            # _headers (cache rules), favicon
+wrangler.jsonc     # Cloudflare Workers config
 ```
 
 ## Deployment
 
-This project is deployed to Cloudflare Workers Static Assets.
+This project is deployed to **Cloudflare Workers Static Assets**.
 
-### Production URL
-
-[View deployed site](https://ai-chef-landing.marina-sirenko1-80f.workers.dev)
-
-### Deploy command
+**Production URL:** [https://ai-chef-landing.marina-sirenko1-80f.workers.dev](https://ai-chef-landing.marina-sirenko1-80f.workers.dev)
 
 ```bash
 npm run deploy
 ```
 
-### Local Cloudflare preview
-
-```bash
-npm run dev:cf
-```
-
-### Performance audit
-
-After deployment, run:
-
-```txt
-user-run-web-perf-audit https://ai-chef-landing.marina-sirenko1-80f.workers.dev
-```
-
-### Routing
-
-SPA fallback is not enabled. This is expected for simple static landing pages or projects without a client-side router.
-
-## AI-assisted workflow
-
-This project was built with custom Cursor commands and MCP tools (Figma, Chrome DevTools, Cloudflare).
-
-See **[AGENT.md](./AGENT.md)** for the full automation pipeline, command list, and what stays with the developer.
+SPA fallback is not enabled — this is a static landing page without client-side routing.
 
 ## Credits
 
-- UI design based on a Figma Community template (AI Chef / meal planning theme)
-- Built as part of a Cursor workflow experiment, 2026
+- **Design:** [AIChefMate template by Olga Averchenko](https://olgaaverchenko.gumroad.com/l/aichefmate).
+- **Front-end:** responsive engineering, animation, optimization, and deployment by me.
+- Brand name and content belong to the original template author.
+
+---
+
+
+
+# AIChefMate — адаптивный лендинг
+
+> **Front-end кейс для портфолио.** Из десктопного макета Figma — в вёрстку, которая уверенно держится на любом экране: от 360px телефона до 34" ultrawide. Fluid-масштабирование, ручной reflow по секциям и почти идеальный Lighthouse.
+
+**Стек:** HTML · CSS · JavaScript · GSAP · Vite · Cloudflare Workers Static Assets  
+**Lighthouse:** Performance 98 · Accessibility 100 · Best Practices 100 · SEO 100
+
+🔗 **Live demo:** [https://ai-chef-landing.marina-sirenko1-80f.workers.dev](https://ai-chef-landing.marina-sirenko1-80f.workers.dev)  
+🎨 **Дизайн:** [шаблон AIChefMate — Olga Averchenko](https://olgaaverchenko.gumroad.com/l/aichefmate) · front-end реализация — моя
+
+---
+
+## Контекст
+
+Дизайн представлен в виде максимального десктопного макета. Адаптив, (а именно как сайт ведёт себя на ноутбуке, планшете и телефоне) не был описан. Мной была проделана следующая работа: breakpoints, порядок reflow, что масштабируется, что скрывается, как меняются формы.
+
+## Задача
+
+Макет под широкий экран задаёт пропорции и иерархию, а не абсолютные высоты «пиксель в пиксель». Буквальный перенос ломается на ноутбуке и телефоне. Нужно было превратить фиксированный холст в систему, которая масштабируется по контенту и ratio, сохраняя характер дизайна — без костылей под каждое устройство и без поломок между breakpoints.
+
+## Что сделано
+
+- **Полная responsive-система, 360 → 1920+.** Чистый CSS, desktop-first, сетка breakpoints (1536 / 1024 / 768 / 480) под реальные устройства, а не случайные числа.
+- **Fluid-масштабирование через `clamp()`** вместо жёстких ступеней. Типографика, отступы и компоненты плавно меняются между опорными ширинами — макет читается на любом размере без «zoom to fit».
+- **Reflow по секциям**, где простое складывание в колонку ломает дизайн:
+  - Hero gallery: 3 → 2 → 1 колонка, боковые изображения скрываются постепенно.
+  - Benefits bento: вертикальные капсулы на mobile становятся читаемыми карточками с сохранением цветового ритма.
+  - Pricing: 3 → 1 колонка, акцент featured-плана сохранён без «приподнятой» карточки.
+  - Step slider: swipe и кнопки вместе через scroll-snap.
+  - Footer: многоколоночный desktop → чистый single-column stack на mobile.
+- **Нативное видео с кастомными mini-controls** вместо YouTube — pill-форма обрезала стандартные controls, поэтому панель пересобрана внутри «безопасной» зоны капсулы.
+- **GSAP-анимации** в hero, process slider и FAQ accordion.
+- **Performance & delivery:** responsive WebP, self-hosted шрифты, cache headers, SEO, деплой на Cloudflare Workers Static Assets.
+
+## Подход
+
+В макете был один размер экрана; каждое адаптивное решение — моя ответственность. Адаптация как design problem, а не механический resize.
+
+Проверено на реальных устройствах и эмуляции:
+
+- **Физически:** MacBook Air 13", Samsung Galaxy S21, Xiaomi 34" ultrawide.
+- **Эмуляция:** iPad Air, iPad Mini, iPad Pro 11"/13", iPhone 17 Pro Max, iPhone SE, ноутбуки, профиль Samsung S21.
+
+Рутинную разметку ускоряла AI-автоматизация (Cursor commands + MCP), фокус оставался на layout и UX. Подробнее — [AGENT.md](./AGENT.md).
+
+
+
+## Результаты
+
+
+| Метрика        | Оценка |
+| -------------- | ------ |
+| Performance    | 98     |
+| Accessibility  | 100    |
+| Best Practices | 100    |
+| SEO            | 100    |
+
+
+Корректный рендер на всей матрице устройств, структурированная и поддерживаемая кодовая база.
+
+## Стек
+
+
+| Область  | Инструменты                                     |
+| -------- | ----------------------------------------------- |
+| Вёрстка  | HTML, CSS (pure, desktop-first, `clamp()`, BEM) |
+| Логика   | Vanilla JavaScript                              |
+| Анимация | GSAP                                            |
+| Сборка   | Vite                                            |
+| Хостинг  | Cloudflare Workers Static Assets (Wrangler)     |
+
+
+## Запуск проекта
+
+### Требования
+
+- [Node.js](https://nodejs.org/) 20+ (рекомендуется LTS)
+- npm (устанавливается вместе с Node.js)
+
+### Установка и локальный запуск
+
+```bash
+# после клонирования репозитория:
+npm install
+npm run dev
+```
+
+Откройте URL из терминала — обычно `http://localhost:5173`.
+
+### Доступные команды
+
+
+| Команда                | Описание                                                        |
+| ---------------------- | --------------------------------------------------------------- |
+| `npm run dev`          | Dev-сервер Vite с hot reload                                    |
+| `npm run build`        | Production-сборка → `dist/`                                     |
+| `npm run preview`      | Локальный просмотр production-сборки                            |
+| `npm run dev:cf`       | Локальный preview через Wrangler (окружение Cloudflare Workers) |
+| `npm run deploy`       | Сборка и деплой на Cloudflare Workers                           |
+| `npm run format`       | Форматирование Prettier                                         |
+| `npm run format:check` | Проверка форматирования без записи                              |
+
+
+### Структура проекта
+
+```txt
+src/
+  assets/          # изображения, иконки, шрифты, видео
+  scripts/         # main.js, слайдеры, accordion, demo video
+  styles/
+    base/          # reset, variables, typography, fonts
+    layout/        # container, sections
+    components/    # buttons, cards
+    sections/      # один CSS-файл на секцию лендинга
+    utilities/     # accessibility, images, animations
+index.html
+public/            # _headers (cache rules), favicon
+wrangler.jsonc     # конфиг Cloudflare Workers
+```
+
+## Деплой
+
+Проект размещён на **Cloudflare Workers Static Assets**.
+
+**Production URL:** [https://ai-chef-landing.marina-sirenko1-80f.workers.dev](https://ai-chef-landing.marina-sirenko1-80f.workers.dev)
+
+```bash
+npm run deploy
+```
+
+SPA fallback не включён — это статический лендинг без client-side routing.
+
+## Credits
+
+- **Дизайн:** [шаблон AIChefMate — Olga Averchenko](https://olgaaverchenko.gumroad.com/l/aichefmate).
+- **Front-end:** адаптив, анимации, оптимизация и деплой — моя работа.
+- Название бренда и контент принадлежат автору шаблона.
+
