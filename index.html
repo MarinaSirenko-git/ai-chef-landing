@@ -104,29 +104,57 @@
                 <p class="hero-stat-card__value">95%</p>
                 <p class="hero-stat-card__label">Improved Eating Habits</p>
                 <picture class="hero-stat-card__picture">
-                  <source srcset="/src/assets/images/photo-vegetables.webp" type="image/webp" />
+                  <source
+                    srcset="
+                      /src/assets/images/photo-vegetables-260.webp 260w,
+                      /src/assets/images/photo-vegetables-394.webp 394w,
+                      /src/assets/images/photo-vegetables-788.webp 788w
+                    "
+                    sizes="260px"
+                    type="image/webp"
+                  />
 
                   <img
                     class="hero-stat-card__image"
                     src="/src/assets/images/photo-vegetables.jpg"
+                    srcset="
+                      /src/assets/images/photo-vegetables-260.jpg 260w,
+                      /src/assets/images/photo-vegetables-394.jpg 394w,
+                      /src/assets/images/photo-vegetables-788.jpg 788w
+                    "
+                    sizes="260px"
                     alt=""
                     width="260"
-                    height="293"
+                    height="390"
                     decoding="async"
                   />
                 </picture>
               </article>
             </li>
             <li class="hero__gallery-item hero__gallery-item--image-start">
-              <picture class="hero__picture">
-                <source srcset="/src/assets/images/photo-meal-center.webp" type="image/webp" />
+                <picture class="hero__picture">
+                <source
+                  srcset="
+                    /src/assets/images/photo-meal-center-280.webp 280w,
+                    /src/assets/images/photo-meal-center-440.webp 440w,
+                    /src/assets/images/photo-meal-center-880.webp 880w
+                  "
+                  sizes="275px"
+                  type="image/webp"
+                />
 
                 <img
                   class="hero__image"
                   src="/src/assets/images/photo-meal-center.jpg"
+                  srcset="
+                    /src/assets/images/photo-meal-center-280.jpg 280w,
+                    /src/assets/images/photo-meal-center-440.jpg 440w,
+                    /src/assets/images/photo-meal-center-880.jpg 880w
+                  "
+                  sizes="275px"
                   alt="Center hero food photo"
                   width="275"
-                  height="461"
+                  height="413"
                   decoding="async"
                   fetchpriority="high"
                 />
@@ -213,9 +241,9 @@
                   srcset="
                     /src/assets/images/demo-video-basil-382.webp 382w,
                     /src/assets/images/demo-video-basil-760.webp 760w,
-                    /src/assets/images/demo-video-basil.webp 1600w
+                    /src/assets/images/demo-video-basil-1024.webp 1024w
                   "
-                  sizes="(max-width: 768px) 100vw, 68vw"
+                  sizes="(max-width: 768px) 100vw, 1008px"
                   type="image/webp"
                 />
 
@@ -225,12 +253,12 @@
                   srcset="
                     /src/assets/images/demo-video-basil-382.jpg 382w,
                     /src/assets/images/demo-video-basil-760.jpg 760w,
-                    /src/assets/images/demo-video-basil.jpg 1600w
+                    /src/assets/images/demo-video-basil-1024.jpg 1024w
                   "
-                  sizes="(max-width: 768px) 100vw, 68vw"
+                  sizes="(max-width: 768px) 100vw, 1008px"
                   alt="Fresh basil leaves in demo video preview"
-                  width="1045"
-                  height="610"
+                  width="1024"
+                  height="683"
                   decoding="async"
                   loading="lazy"
                 />
@@ -378,14 +406,28 @@
                 />
               </picture>
               <picture class="process__picture process__picture--mid">
-                <source srcset="/src/assets/images/photo-meal-center.webp" type="image/webp" />
+                <source
+                  srcset="
+                    /src/assets/images/photo-meal-center-280.webp 280w,
+                    /src/assets/images/photo-meal-center-440.webp 440w,
+                    /src/assets/images/photo-meal-center-880.webp 880w
+                  "
+                  sizes="440px"
+                  type="image/webp"
+                />
                 <img
                   class="process__photo"
                   src="/src/assets/images/photo-meal-center.jpg"
+                  srcset="
+                    /src/assets/images/photo-meal-center-280.jpg 280w,
+                    /src/assets/images/photo-meal-center-440.jpg 440w,
+                    /src/assets/images/photo-meal-center-880.jpg 880w
+                  "
+                  sizes="440px"
                   alt="AI-generated weekly meal plan preview"
                   data-process-alt="AI-generated weekly meal plan preview"
-                  width="568"
-                  height="682"
+                  width="440"
+                  height="660"
                   decoding="async"
                   loading="lazy"
                 />
@@ -496,14 +538,28 @@
             <li class="benefits__item benefits__item--photo benefits__item--photo-round">
               <figure class="benefit-card benefit-card--photo benefit-card--photo-round">
                 <picture class="benefit-card__picture">
-                  <source srcset="/src/assets/images/photo-vegetables.webp" type="image/webp" />
+                  <source
+                    srcset="
+                      /src/assets/images/photo-vegetables-260.webp 260w,
+                      /src/assets/images/photo-vegetables-394.webp 394w,
+                      /src/assets/images/photo-vegetables-788.webp 788w
+                    "
+                    sizes="394px"
+                    type="image/webp"
+                  />
 
                   <img
                     class="benefit-card__image"
                     src="/src/assets/images/photo-vegetables.jpg"
+                    srcset="
+                      /src/assets/images/photo-vegetables-260.jpg 260w,
+                      /src/assets/images/photo-vegetables-394.jpg 394w,
+                      /src/assets/images/photo-vegetables-788.jpg 788w
+                    "
+                    sizes="394px"
                     alt="Fresh vegetables in a paper bag"
                     width="394"
-                    height="394"
+                    height="591"
                     decoding="async"
                     loading="lazy"
                   />
@@ -631,24 +687,26 @@
                       srcset="
                         /src/assets/images/recipes-featured-spread-382.webp 382w,
                         /src/assets/images/recipes-featured-spread-760.webp 760w,
-                        /src/assets/images/recipes-featured-spread.webp 1071w
+                        /src/assets/images/recipes-featured-spread-800.webp 800w,
+                        /src/assets/images/recipes-featured-spread-1600.webp 1600w
                       "
-                      sizes="(max-width: 1024px) 100vw, 46vw"
+                      sizes="(max-width: 1024px) 100vw, 794px"
                       type="image/webp"
                     />
-    
+
                     <img
                       class="recipes-preview__featured-image"
-                      src="/src/assets/images/recipes-featured-spread.jpg"
+                      src="/src/assets/images/recipes-featured-spread-800.jpg"
                       srcset="
                         /src/assets/images/recipes-featured-spread-382.jpg 382w,
                         /src/assets/images/recipes-featured-spread-760.jpg 760w,
-                        /src/assets/images/recipes-featured-spread.jpg 1071w
+                        /src/assets/images/recipes-featured-spread-800.jpg 800w,
+                        /src/assets/images/recipes-featured-spread-1600.jpg 1600w
                       "
-                      sizes="(max-width: 1024px) 100vw, 46vw"
+                      sizes="(max-width: 1024px) 100vw, 794px"
                       alt="Large featured recipes food spread"
-                      width="778"
-                      height="960"
+                      width="800"
+                      height="1195"
                       decoding="async"
                       loading="lazy"
                     />
