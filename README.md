@@ -2,7 +2,7 @@
 
 ---
 
-
+<a id="en"></a>
 
 # AIChefMate — Responsive Landing Page
 
@@ -144,7 +144,7 @@ SPA fallback is not enabled — this is a static landing page without client-sid
 
 ---
 
-
+<a id="ru"></a>
 
 # AIChefMate — адаптивный лендинг
 
