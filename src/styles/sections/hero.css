@@ -29,7 +29,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
+  gap: 20px;
+  margin-bottom: 20px;
 }
 
 .hero__title {
@@ -206,6 +207,10 @@
 
   .hero__title {
     max-width: 550px;
+  }
+
+  .hero__content {
+    margin-bottom: 0;
   }
 }
 
